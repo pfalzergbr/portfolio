@@ -3,7 +3,7 @@ export interface FooterProps {
 }
  
 const Footer: React.FC<FooterProps> = () => {
-  return ( <div></div> );
+  return ( <footer>2021, Gabor Peter Pfalzer</footer> );
 }
  
 export default Footer;

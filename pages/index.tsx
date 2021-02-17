@@ -1,20 +1,19 @@
 import Head from 'next/head'
-import styles from '../styles/Home.module.scss'
+// import styles from '../styles/Home.module.scss'
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
         <title>Peter Pfalzer - Portfolio</title>
       </Head>
 
-      <main className={styles.main}>
-        HomePage
+      <main>
+
+        
       </main>
 
-      <footer className={styles.footer}>
-       
-      </footer>
+
     </div>
   )
 }
