@@ -5,12 +5,11 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>Peter Pfalzer - Portfolio</title>
       </Head>
 
       <main className={styles.main}>
-        
+        HomePage
       </main>
 
       <footer className={styles.footer}>
