@@ -1,5 +1,5 @@
-import Footer from "../components/elements/layoutElements/Footer"
-import Navigation from "../components/elements/layoutElements/Navigation"
+import Footer from "../components/layoutElements/Footer"
+import Navigation from "../components/layoutElements/Navigation"
 
 export interface LayoutProps {
   children
