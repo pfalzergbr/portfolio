@@ -44,7 +44,11 @@
 
 // Components 
 
-@mixin padding-regular {
-  padding: .8rem 1.6rem;
+@mixin button-regular {
+  padding: .5em 1em;
+  color: $color-grey-dark;
+  border: 1px solid $color-orange-medium;
+  border-radius: 5rem;
+  font-weight: 600;
 }
 // Transitions
