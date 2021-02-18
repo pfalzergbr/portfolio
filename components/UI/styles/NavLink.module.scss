@@ -10,10 +10,6 @@
   padding: $space-sm-8 0;
   cursor: pointer;
 
-  & .active {
-    color: $color-orange-medium;
-  }
-
   &:after {
     content: '';
     position: absolute;
@@ -32,4 +28,9 @@
     }
 
   }
+}
+
+.active {
+  color: $color-orange-medium;
+
 }

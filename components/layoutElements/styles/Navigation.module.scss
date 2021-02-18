@@ -4,7 +4,10 @@
 
 .navlinkContainer {
   padding: $space-56 0;
-  width: 90%;
-  // max-width: 108rem;
+  width: 90%;  
   margin: 0 auto;
+  
+  @include tablet-landscape-up {
+    width: 80%;
+  }
 }
