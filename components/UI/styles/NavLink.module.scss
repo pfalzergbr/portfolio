@@ -1,0 +1,35 @@
+@import '../../../styles/abstracts/variables';
+@import '../../../styles/abstracts/mixins';
+@import '../../../styles/base/typography';
+
+.navlink {
+  position: relative;
+  color: $color-off-white;
+  font-size: $font-size-24;
+  margin-right: $space-32;
+  padding: $space-sm-8 0;
+  cursor: pointer;
+
+  & .active {
+    color: $color-orange-medium;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    border-bottom: 1px solid $color-orange-medium;
+    transition: 0.2s;
+  }
+
+  &:hover, &:focus {
+    color: $color-orange-medium;
+    
+    &:after {
+      width: 100%;
+    }
+
+  }
+}

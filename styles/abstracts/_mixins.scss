@@ -42,5 +42,9 @@
   grid-column: 1/ -1;
 }
 
+// Components 
 
+@mixin padding-regular {
+  padding: .8rem 1.6rem;
+}
 // Transitions

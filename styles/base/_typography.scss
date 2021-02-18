@@ -1,27 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700&display=swap');
 
-body {
-  font-family:'Raleway';
-  font-size: $font-size-16;
-  line-height: 2.4rem;
-  color: $color-off-white;
-}
 
-h1 {
+
+.header-1 {
   font-family: 'Raleway';
   font-size: $font-size-54;
 }
 
-h2 {
+.header-2 {
   font-size: $font-size-36;
   line-height: 4.4rem;
 }
 
-h3 {
+.header-3 {
   font-size: $font-size-24;
   line-height: 3.2rem;
 }
 
-p, span, label, button, a {
-  font-size: $font-size-16;
-}
