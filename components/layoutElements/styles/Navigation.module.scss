@@ -1,0 +1,10 @@
+@import '../../../styles/abstracts/variables';
+@import '../../../styles/abstracts/mixins';
+@import '../../../styles/base/typography';
+
+.navlinkContainer {
+  padding: $space-56 0;
+  width: 90%;
+  // max-width: 108rem;
+  margin: 0 auto;
+}

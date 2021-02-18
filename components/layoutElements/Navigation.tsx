@@ -1,26 +1,17 @@
-import Link from 'next/link';
+import NavLink from '../UI/NavLink';
+import styles from './styles/Navigation.module.scss';
 
-export interface NavigationProps {}
+//Todo - add hamburger
 
-const Navigation: React.FC<NavigationProps> = () => {
+const Navigation: React.FC = () => {
   return (
     <nav>
-      <div>
-        <Link href='/'>
-          <a>Home</a>
-        </Link>
-        <Link href='/portfolio'>
-          <a>Portfolio</a>
-        </Link>
-        <Link href='/skills'>
-          <a>Skills</a>
-        </Link>
-        <Link href='/contact'>
-          <a>Contact</a>
-        </Link>
-        <Link href='about'>
-          <a>About</a>
-        </Link>
+      <div className={styles.navlinkContainer}>
+        <NavLink href="/" text="Home" />
+        <NavLink href="/portfolio" text="Portfolio" />
+        <NavLink href="/skills" text="Skills" />
+        <NavLink href="/contact" text="Contact" />
+        <NavLink href="/about" text="About" />
       </div>
     </nav>
   );

@@ -1,18 +1,18 @@
-
 // Resets
 
 html {
-  font-size: 62.5%;
+  font-size: 50%;
+
+  @include tablet-landscape-up {
+    font-size: 62.5%;
+  }
 }
 
 html,
 body {
   padding: 0;
   margin: 0;
-}
-
-body {
-  font-size: 1.6rem;
+  background: $color-grey-dark;
 }
 
 a {
@@ -23,6 +23,5 @@ a {
 * {
   box-sizing: border-box;
 }
-
 
 // Layout

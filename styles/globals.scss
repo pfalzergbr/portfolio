@@ -1,5 +1,15 @@
 @import './abstracts/variables';
-@import './abstracts/variables';
-@import './base/typograpgy';
+@import './abstracts/mixins';
+@import './base/typography';
 @import './base/base';
 
+body {
+  font-family:'Raleway';
+  font-size: $font-size-16;
+  line-height: 2.4rem;
+  color: $color-off-white;
+}
+
+p, span, label, button, a {
+  font-size: $font-size-16;
+}
