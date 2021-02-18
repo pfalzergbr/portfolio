@@ -10,7 +10,7 @@ const Hero: React.FC = () => {
           <span className={styles.hero_header_1_highlight}>Gabor Pfalzer</span>
         </h1>
         <h2 className={styles.hero_header_3}>
-          Full Stack Web Developer based in London.{' '}
+          I am a Full Stack Web Developer based in London.{' '}
           Check out my work to see what I can do for you.{' '}
         </h2>
         <h2 className={styles.hero_header_3}>
