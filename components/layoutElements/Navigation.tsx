@@ -1,7 +1,7 @@
 import NavLink from '../UI/NavLink';
 import styles from './styles/Navigation.module.scss';
 
-//Todo - add hamburger
+//Todo - add hamburger menu
 
 const Navigation: React.FC = () => {
   return (
