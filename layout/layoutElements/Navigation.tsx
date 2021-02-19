@@ -1,4 +1,4 @@
-import NavLink from '../UI/NavLink';
+import NavLink from './NavLink';
 import styles from './styles/Navigation.module.scss';
 
 //Todo - add hamburger menu

@@ -1,4 +1,4 @@
-import SocialIcon from '../../components/UI/SocialIcon';
+import SocialIcon from '../../components/landing/SocialIcon';
 
 export interface SkillsProps {}
 

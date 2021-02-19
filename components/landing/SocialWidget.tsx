@@ -1,4 +1,4 @@
-import SocialIcon from '../UI/SocialIcon';
+import SocialIcon from './SocialIcon';
 import styles from './styles/SocialWidget.module.scss';
 
 const SocialWidget: React.FC = () => {

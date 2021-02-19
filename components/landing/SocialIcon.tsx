@@ -9,7 +9,6 @@ const SocialIcon: React.FC<SocialIconProps> = ({ logo, url }) => {
   return (
     <a href={url} className={styles.socialIcon_container}>
       <svg className={styles.socialIcon} focusable={true}>
-        {/* <use href={`/social/social-${logo}.svg#social-${logo}`}></use>*/}
         <use href={`/social/sprite.svg#social-${logo}`}></use>
       </svg>
     </a>

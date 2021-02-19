@@ -1,6 +1,6 @@
 import Head from 'next/head'
-import Hero from '../components/elements/Hero'
-import SocialWidget from '../components/elements/SocialWidget'
+import Hero from '../components/landing/Hero'
+import SocialWidget from '../components/landing/SocialWidget'
 import styles from './index.module.scss'
 
 export default function Home() {

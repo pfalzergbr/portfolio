@@ -1,5 +1,5 @@
-import Footer from "../components/layoutElements/Footer"
-import Navigation from "../components/layoutElements/Navigation"
+import Footer from "./layoutElements/Footer"
+import Navigation from "./layoutElements/Navigation"
 import styles from "./styles/layout.module.scss";
 
 export interface LayoutProps {
