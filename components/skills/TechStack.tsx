@@ -1,5 +1,6 @@
 import TechStackBlock from './TechStackBlock';
 import styles from './styles/TechStack.module.scss';
+import SkillHeader from './SkillHeader';
 
 export interface Tech {
   icon: string;
@@ -26,9 +27,12 @@ export interface TechStackProps {}
 
 const TechStack: React.FC<TechStackProps> = () => {
   return (
-    <div className={styles.techStack_grid}>
-      <TechStackBlock techList={languagesBlock} />
-      <TechStackBlock techList={frontendBlock} />
+    <div className={styles.techStack_container}>
+      <SkillHeader title="Skills & Stack" subtitle="technologies I have experience with"/>
+      <div className={styles.techStack_grid}>
+        <TechStackBlock techList={languagesBlock} />
+        <TechStackBlock techList={frontendBlock} />
+      </div>
     </div>
   );
 };
