@@ -12,6 +12,7 @@ const languagesBlock: Tech[] = [
   { icon: 'typescript', label: 'TypeScript' },
   { icon: 'html', label: 'HTML' },
   { icon: 'css', label: 'CSS' },
+
 ];
 
 const frontendBlock: Tech[] = [
@@ -23,6 +24,22 @@ const frontendBlock: Tech[] = [
   { icon: 'sass', label: 'Sass' },
 ];
 
+const backendBlock: Tech[] = [
+  { icon: 'nodejs', label: 'Node.js' },
+  { icon: 'mysql', label: 'MySql' },
+  { icon: 'postgres', label: 'PostgreSQL' },
+  { icon: 'mongodb', label: 'MongoDb' },
+  { icon: 'firebase', label: 'Firebase' },
+];
+
+const otherBlock: Tech[] = [
+  { icon: 'git', label: 'Git' },
+  { icon: 'github', label: 'Github' },
+  { icon: 'docker', label: 'Docker' },
+  { icon: 'jest', label: 'Jest' },
+  { icon: 'figma', label: 'Figma' },
+];
+
 export interface TechStackProps {}
 
 const TechStack: React.FC<TechStackProps> = () => {
@@ -32,6 +49,8 @@ const TechStack: React.FC<TechStackProps> = () => {
       <div className={styles.techStack_grid}>
         <TechStackBlock techList={languagesBlock} />
         <TechStackBlock techList={frontendBlock} />
+        <TechStackBlock techList={backendBlock} />
+        <TechStackBlock techList={otherBlock} />
       </div>
     </div>
   );
