@@ -20,7 +20,7 @@ const frontendBlock: Tech[] = [
   { icon: 'nextjs', label: 'Next.js' },
   { icon: 'redux', label: 'Redux' },
   { icon: 'vue', label: 'Vue' },
-  { icon: 'nuxt', label: 'Nuxt.js' },
+  // { icon: 'nuxt', label: 'Nuxt.js' },
   { icon: 'sass', label: 'Sass' },
 ];
 
