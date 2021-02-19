@@ -17,8 +17,8 @@ const Hero: React.FC = () => {
         </h2>
       </div>
       <div className='buttonContainer'>
-        <Link href='/portfolio'>
-          <a className={styles.hero_cta}>View Portfolio</a>
+        <Link href='/projects'>
+          <a className={styles.hero_cta}>View Projects</a>
         </Link>
       </div>
     </main>

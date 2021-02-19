@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Hero from '../components/elements/Hero'
+import SocialWidget from '../components/elements/SocialWidget'
 import styles from './index.module.scss'
 
 export default function Home() {
@@ -9,6 +10,7 @@ export default function Home() {
         <title>Peter Pfalzer - Portfolio</title>
       </Head>
       <Hero/>
+      <SocialWidget />
 
 
     </div>

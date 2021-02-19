@@ -2,18 +2,17 @@ import styles from './styles/SocialIcon.module.scss';
 
 export interface SocialIconProps {
   logo: string;
+  url: string;
 }
 
-const SocialIcon: React.FC<SocialIconProps> = ({ logo }) => {
+const SocialIcon: React.FC<SocialIconProps> = ({ logo, url }) => {
   return (
-    <div>
-      <object
-        aria-label={`logo of ${logo} `}
-        className={styles.socialIcon}
-        type='image/svg+xml'
-        data={`/social/social-${logo}.svg`}
-      ></object>
-    </div>
+    <a href={url} className={styles.socialIcon_container}>
+      <svg className={styles.socialIcon} focusable={true}>
+        {/* <use href={`/social/social-${logo}.svg#social-${logo}`}></use>*/}
+        <use href={`/social/sprite.svg#social-${logo}`}></use>
+      </svg>
+    </a>
   );
 };
 
