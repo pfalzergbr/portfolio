@@ -11,8 +11,7 @@ export default function Home() {
       </Head>
       <Hero/>
       <SocialWidget />
-
-
     </div>
   )
 }
+//TODO - change the grid responsiveness to mobile first

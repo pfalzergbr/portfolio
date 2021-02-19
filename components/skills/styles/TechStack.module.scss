@@ -1,0 +1,7 @@
+@import '../../../styles/abstracts/variables';
+
+.techStack_grid {
+  display: grid;
+  grid-auto-columns: max-content;
+  grid-row-gap: $space-16;
+}

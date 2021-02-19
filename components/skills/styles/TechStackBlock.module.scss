@@ -1,0 +1,8 @@
+@import '../../../styles/abstracts/variables';
+
+
+.techStack_block {
+  display: grid;
+  grid-auto-rows: min-content;
+  grid-row-gap: $space-16;
+}

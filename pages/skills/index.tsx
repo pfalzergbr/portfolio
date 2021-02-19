@@ -1,11 +1,13 @@
-import SocialIcon from '../../components/landing/SocialIcon';
+import TechStack from '../../components/skills/TechStack';
+import styles from './index.module.scss';
 
 export interface SkillsProps {}
 
 const Skills: React.FC<SkillsProps> = () => {
   return (
-    <div>
-    </div>
+    <main className={styles.skills}>
+      <TechStack />
+    </main>
   );
 };
 
