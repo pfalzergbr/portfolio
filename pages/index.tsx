@@ -1,5 +1,6 @@
 import Head from 'next/head'
-import Hero from '../components/elements/Hero'
+import Hero from '../components/landing/Hero'
+import SocialWidget from '../components/landing/SocialWidget'
 import styles from './index.module.scss'
 
 export default function Home() {
@@ -9,8 +10,8 @@ export default function Home() {
         <title>Peter Pfalzer - Portfolio</title>
       </Head>
       <Hero/>
-
-
+      <SocialWidget />
     </div>
   )
 }
+//TODO - change the grid responsiveness to mobile first

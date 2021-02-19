@@ -1,0 +1,15 @@
+@import '../../../styles/abstracts/variables';
+
+.techStack_container {
+  display: grid;
+  grid-row: 2/3;
+  grid-template-columns: max-content, max-content;
+  grid-row-gap: $space-56;
+}
+
+.techStack_grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 18rem);
+  grid-row-gap: $space-32;
+  grid-column-gap: $space-32;
+}

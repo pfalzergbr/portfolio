@@ -1,0 +1,24 @@
+@import '../../../styles/abstracts/variables';
+
+.socialIcon_container {
+  position: relative;
+  display: inline-block;
+  height: 4.2rem;
+  width: 4.2rem;
+  cursor: pointer;
+
+  // &:hover .socialIcon {
+  //   fill: $color-orange-medium;
+  // }
+}
+
+.socialIcon {
+  height: 4.2rem;
+  width: 4.2rem;
+  fill: $color-off-white;
+  transition: 0.2s ease-in-out;
+
+  &:hover, &:focus {
+    fill: $color-orange-medium;
+  }
+}

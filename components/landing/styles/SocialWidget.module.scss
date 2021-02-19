@@ -1,0 +1,14 @@
+@import '../../../styles/abstracts/variables';
+
+.socialWidget {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  grid-column: 2/3;
+  grid-row: 2/3;
+
+  & > a {
+    margin-bottom: $space-32;
+  }
+}

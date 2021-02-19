@@ -1,0 +1,22 @@
+@import '../../../styles/abstracts/variables';
+
+.techElement {
+  display: flex;
+  cursor: pointer;
+  height: 3.2rem;
+  align-items: center;
+  transition: 0.1s ease-in-out;
+
+  &:hover {
+    color: $color-orange-medium;
+
+    & svg {
+      fill: $color-orange-medium;
+    }
+  }
+}
+
+.tech_label {
+  display: inline-block;
+  margin-left: $space-12;
+}
