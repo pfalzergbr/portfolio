@@ -18,7 +18,7 @@ const TechStack: React.FC<TechStackProps> = ({ techStack }) => {
     <div className={styles.techStack_container}>
       <SkillHeader
         title='Skills & Stack'
-        subtitle='technologies I have experience with'
+        subtitle=''
       />
       <div className={styles.techStack_grid}>
         <TechStackBlock techList={languagesBlock} />

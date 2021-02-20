@@ -3,7 +3,8 @@
 
 .techStack_block {
   display: grid;
-  width: 18rem;
+  width: 16rem;
   grid-auto-rows: min-content;
   grid-row-gap: $space-16;
+  margin-left: 0;
 }
