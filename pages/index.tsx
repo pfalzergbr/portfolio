@@ -10,14 +10,13 @@ export default function Home({ socialIcons }) {
   return (
     <AnimatedRoute className={styles.landing}>
       <>
-        {/* <div className={styles.landing}> */}
         <Head>
-          <title>Peter Pfalzer - Portfolio</title>
+          <title>Gabor Pfalzer - Home</title>
+          <meta name="description" content="Full Stack Web Developer portfolio site of Gabor Pfalzer" ></meta>
         </Head>
         <Hero />
         <SocialWidget socialIcons={socialIcons} />
       </>
-      {/* </div> */}
     </AnimatedRoute>
   );
 }

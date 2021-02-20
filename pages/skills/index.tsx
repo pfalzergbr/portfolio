@@ -23,12 +23,10 @@ export interface SkillsProps {
 const Skills: React.FC<SkillsProps> = ({ techStack }) => {
   return (
     <AnimatedRoute className={styles.skills}>
-      {/* <main className={styles.skills}> */}
       <>
         <TechStack techStack={techStack} />
         <LanguageBlock />
       </>
-      {/* </main> */}
     </AnimatedRoute>
   );
 };
