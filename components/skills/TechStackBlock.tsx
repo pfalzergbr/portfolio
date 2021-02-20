@@ -1,6 +1,6 @@
 import styles from './styles/TechStackBlock.module.scss';
 import { motion, AnimatePresence } from 'framer-motion';
-import { fadeInGroup} from '../../transitions/fadeInGroup';
+import { fadeInGroup } from '../../transitions/fadeInGroup';
 import { Tech } from '../../data/techData';
 import TechElement from './TechElement';
 
