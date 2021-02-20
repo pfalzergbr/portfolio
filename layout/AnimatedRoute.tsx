@@ -2,12 +2,11 @@ import { motion } from 'framer-motion';
 
 export interface AnimatedRouteProps {
   children: JSX.Element;
-  className: string;
+  className?: string;
 }
 
-const transition = {}
 
-const AnimatedRoute: React.FC<AnimatedRouteProps> = ({ children, className }) => {
+const AnimatedRoute: React.FC<AnimatedRouteProps> = ({ children, className = "" }) => {
   return (
     <motion.div className={className} initial='initial' animate='enter' exit='exit' variants={{
       initial: {

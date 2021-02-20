@@ -2,7 +2,6 @@ import { GetStaticProps } from 'next';
 import LanguageBlock from '../../components/skills/LanguageBlock';
 import TechStack from '../../components/skills/TechStack';
 import AnimatedRoute from '../../layout/AnimatedRoute';
-import styles from './index.module.scss';
 import {
   Tech,
   languagesBlock,
@@ -10,6 +9,7 @@ import {
   backendBlock,
   otherBlock,
 } from '../../data/techData';
+import styles from './index.module.scss';
 
 export interface SkillsProps {
   techStack: {
