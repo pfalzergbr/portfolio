@@ -1,3 +1,4 @@
+import { GetStaticProps } from 'next';
 import LanguageBlock from '../../components/skills/LanguageBlock';
 import TechStack from '../../components/skills/TechStack';
 import AnimatedRoute from '../../layout/AnimatedRoute';
@@ -25,7 +26,7 @@ const Skills: React.FC<SkillsProps> = ({ techStack }) => {
 };
 
 
-export const getStaticProps = async () => {
+export const getStaticProps: GetStaticProps = async () => {
   return {
     props: {
       techStack: {

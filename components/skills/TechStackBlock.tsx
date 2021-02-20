@@ -1,5 +1,5 @@
 import styles from './styles/TechStackBlock.module.scss';
-import { Tech } from './TechStack';
+import { Tech } from '../../data/techData'
 import TechElement from './TechElement';
 
 export interface TechStackBlockProps {
