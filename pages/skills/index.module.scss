@@ -1,17 +1,11 @@
 @import '../../styles/abstracts/variables';
 @import '../../styles/abstracts/mixins';
 
-
 .skills {
   display: grid;
   grid-template-rows: 1.6rem repeat(2, max-content);
   grid-template-columns: 1fr 1fr;
   // grid-row: 2/3;
 
-  width: 90%;  
-  margin: 0 auto;
-  
-  @include tablet-landscape-up {
-    width: 80%;
-  }
+  @include centered-container;
 }
