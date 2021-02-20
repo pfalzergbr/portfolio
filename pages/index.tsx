@@ -1,3 +1,4 @@
+import { GetStaticProps } from 'next';
 import Head from 'next/head';
 import Hero from '../components/landing/Hero';
 import SocialWidget from '../components/landing/SocialWidget';
@@ -22,7 +23,7 @@ export default function Home({socialIcons}) {
 }
 //TODO - change the grid responsiveness to mobile first
 
-export const getStaticProps = async (context) => {
+export const getStaticProps: GetStaticProps = async (context) => {
   return {
     props: {
       socialIcons: defaultSocialIcons
