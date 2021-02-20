@@ -1,14 +1,21 @@
 import SocialIcon from './SocialIcon';
 import styles from './styles/SocialWidget.module.scss';
 
-const SocialWidget: React.FC = () => {
+
+
+
+const SocialWidget = ({socialIcons = []}) => {
   return (
     <div className={styles.socialWidget}>
-      <SocialIcon logo='github' url='https://github.com/pfalzergbr' />
-      <SocialIcon logo='linkedin' url='https://www.linkedin.com/in/gabor-peter-pfalzer-10552224/'/>
-      <SocialIcon logo='twitter' url='https://twitter.com/GaborPfalzer'/>
+      {socialIcons.map((icon, index) => (
+        <SocialIcon logo={icon.logo} url={icon.url} key={index} />
+      ))}
     </div>
   );
 };
+
+
+
+
 
 export default SocialWidget;
