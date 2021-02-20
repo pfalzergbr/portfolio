@@ -1,0 +1,11 @@
+@import '../../../styles/abstracts/variables';
+
+.language_block {
+  margin-top: $space-96;
+
+  grid-row: 3/4;
+}
+
+.language_list {
+  margin-top: $space-56;
+}
