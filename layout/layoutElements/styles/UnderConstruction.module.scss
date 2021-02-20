@@ -1,0 +1,37 @@
+@import '../../../styles/abstracts/variables';
+@import '../../../styles/abstracts/mixins';
+
+.underConstruction{
+  margin-top: 4rem;
+  width: 90%;  
+  margin: 0 auto;
+  
+  @include tablet-landscape-up {
+    width: 80%;
+  }
+
+}
+
+
+.title {
+  font-size: $font-size-36;
+  line-height: 4.2rem;
+  color: $color-orange-medium;
+  font-weight: 400;
+}
+
+.subtitle {
+  font-size: $font-size-24;
+  line-height: 2.4rem;
+  color: $color-off-white;
+  font-weight: 300;
+  margin-top: $space-sm-8;
+}
+
+.headerlink {
+  font-size: $font-size-24;
+  line-height: 2.4rem;
+  color: $color-orange-medium;
+  font-weight: 300;
+  margin-top: $space-sm-4;
+}

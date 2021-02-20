@@ -1,9 +1,11 @@
+import UnderConstruction from "../../layout/layoutElements/UnderConstruction"
+
 export interface Props {
   
 }
  
 const Contact: React.FC<Props> = () => {
-  return ( <div>Contact</div> );
+  return ( <UnderConstruction />);
 }
  
 export default Contact;
