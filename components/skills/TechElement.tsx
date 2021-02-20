@@ -1,4 +1,6 @@
 import styles from './styles/TechElement.module.scss';
+import { motion } from 'framer-motion';
+import { fadeInItem } from '../../transitions/fadeInGroup';
 import TechIcon from './TechIcon';
 
 export interface LanguageElementProps {
@@ -8,10 +10,10 @@ export interface LanguageElementProps {
 
 const LanguageElement: React.FC<LanguageElementProps> = ({ icon, label }) => {
   return (
-    <div className={styles.techElement}>
+    <motion.div variants={fadeInItem} className={styles.techElement}>
       <TechIcon icon={icon} />
       <span className={styles.tech_label}>{label}</span>
-    </div>
+    </motion.div>
   );
 };
 

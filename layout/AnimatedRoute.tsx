@@ -1,25 +1,14 @@
 import { motion } from 'framer-motion';
+import { routeTransition } from '../transitions/routeTransition';
 
 export interface AnimatedRouteProps {
   children: JSX.Element;
-  className: string;
+  className?: string;
 }
 
-const transition = {}
-
-const AnimatedRoute: React.FC<AnimatedRouteProps> = ({ children, className }) => {
+const AnimatedRoute: React.FC<AnimatedRouteProps> = ({ children, className = "" }) => {
   return (
-    <motion.div className={className} initial='initial' animate='enter' exit='exit' variants={{
-      initial: {
-        opacity: 0
-      },
-      enter: {
-        opacity: 1
-      },
-      // exit: {
-      //   opacity: 0
-      // }
-    }}>
+    <motion.div className={className} initial='initial' animate='enter' exit='exit' variants={routeTransition}>
       {children}
     </motion.div>
   );
