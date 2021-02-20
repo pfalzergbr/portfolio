@@ -1,12 +1,12 @@
 export interface LanguageElementProps {
   language: 'string',
-  level: 'string'
+  levelDescription: 'string'
 }
 
-const LanguageElement: React.FC<LanguageElementProps> = ({language, level}) => {
+const LanguageElement: React.FC<LanguageElementProps> = ({language, levelDescription}) => {
   return <div>
-    <h4>{}</h4>
-    <span>{}</span>
+    <h4>{language}</h4>
+    <span>{levelDescription}</span>
   </div>;
 };
 

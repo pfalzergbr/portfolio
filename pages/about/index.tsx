@@ -1,9 +1,9 @@
-export interface Props {
-  
-}
- 
+import UnderConstruction from '../../layout/layoutElements/UnderConstruction';
+
+export interface Props {}
+
 const About: React.FC<Props> = () => {
-  return ( <div>About</div> );
-}
- 
+  return <UnderConstruction />;
+};
+
 export default About;
