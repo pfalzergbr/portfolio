@@ -5,7 +5,7 @@ export interface Props {}
 
 const Portfolio: React.FC<Props> = () => {
   return (
-    <AnimatedRoute>
+    <AnimatedRoute className="">
       <UnderConstruction />
     </AnimatedRoute>
   );
