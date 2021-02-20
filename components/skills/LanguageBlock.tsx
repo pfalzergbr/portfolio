@@ -7,7 +7,7 @@ const LanguageBlock: React.FC = () => {
     <div className={styles.language_block}>
       <SkillHeader
         title='Languages'
-        subtitle='...I speak on different levels'
+        subtitle=''
       />
       <div className={styles.language_list}>
         <LanguageElement

@@ -1,21 +1,15 @@
+import { motion } from 'framer-motion';
 import SocialIcon from './SocialIcon';
 import styles from './styles/SocialWidget.module.scss';
 
-
-
-
-const SocialWidget = ({socialIcons = []}) => {
+const SocialWidget = ({ socialIcons = [] }) => {
   return (
-    <div className={styles.socialWidget}>
+    <motion.div className={styles.socialWidget}>
       {socialIcons.map((icon, index) => (
         <SocialIcon logo={icon.logo} url={icon.url} key={index} />
       ))}
-    </div>
+    </motion.div>
   );
 };
-
-
-
-
 
 export default SocialWidget;
