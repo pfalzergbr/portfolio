@@ -16,9 +16,9 @@ const AnimatedRoute: React.FC<AnimatedRouteProps> = ({ children, className }) =>
       enter: {
         opacity: 1
       },
-      exit: {
-        opacity: 0
-      }
+      // exit: {
+      //   opacity: 0
+      // }
     }}>
       {children}
     </motion.div>
