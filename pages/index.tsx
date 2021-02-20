@@ -6,18 +6,18 @@ import AnimatedRoute from '../layout/AnimatedRoute';
 import styles from './index.module.scss';
 import { defaultSocialIcons } from '../data/socialIcons';
 
-
-
-export default function Home({socialIcons}) {
+export default function Home({ socialIcons }) {
   return (
-    <AnimatedRoute>
-      <div className={styles.landing}>
+    <AnimatedRoute className={styles.landing}>
+      <>
+        {/* <div className={styles.landing}> */}
         <Head>
           <title>Peter Pfalzer - Portfolio</title>
         </Head>
         <Hero />
-        <SocialWidget socialIcons={socialIcons}/>
-      </div>
+        <SocialWidget socialIcons={socialIcons} />
+      </>
+      {/* </div> */}
     </AnimatedRoute>
   );
 }
@@ -26,7 +26,7 @@ export default function Home({socialIcons}) {
 export const getStaticProps: GetStaticProps = async (context) => {
   return {
     props: {
-      socialIcons: defaultSocialIcons
-    }
-  }
+      socialIcons: defaultSocialIcons,
+    },
+  };
 };
