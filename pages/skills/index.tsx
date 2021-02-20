@@ -3,7 +3,13 @@ import LanguageBlock from '../../components/skills/LanguageBlock';
 import TechStack from '../../components/skills/TechStack';
 import AnimatedRoute from '../../layout/AnimatedRoute';
 import styles from './index.module.scss';
-import { Tech, languagesBlock, frontendBlock, backendBlock, otherBlock } from '../../data/techData';
+import {
+  Tech,
+  languagesBlock,
+  frontendBlock,
+  backendBlock,
+  otherBlock,
+} from '../../data/techData';
 
 export interface SkillsProps {
   techStack: {
@@ -16,15 +22,16 @@ export interface SkillsProps {
 
 const Skills: React.FC<SkillsProps> = ({ techStack }) => {
   return (
-    <AnimatedRoute>
-      <main className={styles.skills}>
-        <TechStack techStack={techStack}/>
+    <AnimatedRoute className={styles.skills}>
+      {/* <main className={styles.skills}> */}
+      <>
+        <TechStack techStack={techStack} />
         <LanguageBlock />
-      </main>
+      </>
+      {/* </main> */}
     </AnimatedRoute>
   );
 };
-
 
 export const getStaticProps: GetStaticProps = async () => {
   return {
@@ -33,10 +40,10 @@ export const getStaticProps: GetStaticProps = async () => {
         languagesBlock,
         frontendBlock,
         backendBlock,
-        otherBlock
-      }
-    }
-  }
+        otherBlock,
+      },
+    },
+  };
 };
 
 export default Skills;
