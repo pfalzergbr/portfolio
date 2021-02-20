@@ -2,12 +2,7 @@
 @import '../../../styles/abstracts/mixins';
 
 .footer {
-  width: 90%;
-  margin: 0 auto;
-
-  @include tablet-landscape-up {
-    width: 80%;
-  }
+  @include centered-container;
 
   &_text {
     font-size: $font-size-10;

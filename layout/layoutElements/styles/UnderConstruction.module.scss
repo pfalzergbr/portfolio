@@ -3,12 +3,7 @@
 
 .underConstruction{
   margin-top: 4rem;
-  width: 90%;  
-  margin: 0 auto;
-  
-  @include tablet-landscape-up {
-    width: 80%;
-  }
+  @include centered-container;
 
 }
 
