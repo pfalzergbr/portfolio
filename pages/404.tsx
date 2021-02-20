@@ -6,7 +6,7 @@ const NotFound: React.SFC = () => {
     <h1>
       404. Strange.
     </h1>
-    <Link href="/"><a>Let`s get back to the site.</a></Link>
+    <Link href="/"><a>Let`s get you back to the site.</a></Link>
     </div> );
 }
  
