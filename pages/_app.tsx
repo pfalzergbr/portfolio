@@ -8,7 +8,7 @@ function MyApp({ Component, pageProps, router }: AppProps) {
     <Layout>
       <AnimatePresence exitBeforeEnter>
         {/* <Component {...pageProps} key={router.route}/> */}
-        <Component {...pageProps} key={router.route}/>
+        <Component {...pageProps} />
       </AnimatePresence>
     </Layout>
   );
