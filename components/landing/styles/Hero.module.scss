@@ -50,7 +50,7 @@
   background: $color-orange-medium;
   font-size: $font-size-16;
   @include button-regular;
-  transition: 0.2s ease-out;
+  // transition: 0.2s ease-out;
 
   &:hover, &:focus{
     background: $color-off-white;

@@ -1,0 +1,21 @@
+@import '../../../styles/abstracts/variables';
+
+
+.language_element {
+  display: flex;
+  font-size: $font-size-16; 
+  margin-bottom: $space-sm-4;
+}
+
+.language {
+  display: inline-block;
+  min-width: 9rem;
+  font-weight: 600;
+  
+}
+
+.levelDescription {
+  display: inline-block;
+  font-weight: 300;
+
+}
