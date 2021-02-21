@@ -2,7 +2,25 @@
 @import '../../../styles/abstracts/mixins';
 @import '../../../styles/base/typography';
 
+.navigation {
+  display: flex;
+}
+
+.menuContainer {
+  display: flex;
+  padding: 3rem 0;
+  @include centered-container;
+  @include tablet-portrait-up {
+    display: none;
+  }
+}
+
 .navlinkContainer {
+  display: none;
   padding: $space-56 0;
   @include centered-container;
+
+  @include tablet-portrait-up {
+    display: block;
+  }
 }
