@@ -18,8 +18,8 @@ const TechStackBlock: React.FC<TechStackBlockProps> = ({ techList }) => {
           animate='show'
           className={styles.techStack_block}
         >
-          {techList.map(({ icon, label }) => (
-            <TechElement icon={icon} label={label} />
+          {techList.map(({ icon, label }, index) => (
+            <TechElement icon={icon} label={label} key={icon + index}/>
           ))}
         </motion.div>
       </div>
