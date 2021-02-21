@@ -1,0 +1,55 @@
+@import '../../../styles//abstracts/variables';
+@import '../../../styles//abstracts/mixins';
+
+.menuBtn {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 8rem;
+  height: 8rem;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+  z-index: 5;
+}
+
+.burger {
+  width: 4rem;
+  height: 0.2rem;
+  background: $color-off-white;
+  border-radius: 0.5rem;
+  transition: transform 0.2s ease-in-out;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    width: 4rem;
+    height: 0.2rem;
+    background: $color-off-white;
+    border-radius: 0.5rem;
+    transition: transform 0.2s ease-in-out;
+  }
+
+  &::before {
+    transform: translateY(-1.2rem);
+  }
+
+  &::after {
+    transform: translateY(1.2rem);
+  }
+}
+
+.open .burger {
+  background: transparent;
+}
+
+.open .burger:before {
+  transform: rotate(135deg);
+  background: $color-orange-medium;
+}
+
+.open .burger:after {
+  transform: rotate(-135deg);
+  background: $color-orange-medium;
+}

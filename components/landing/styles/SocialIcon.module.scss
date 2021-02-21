@@ -2,9 +2,10 @@
 
 .socialIcon_container {
   position: relative;
-  display: inline-block;
-  height: 4.2rem;
-  width: 4.2rem;
+  display: flex;
+  align-items: center;
+  height: 5.4rem;
+  width: 5.4rem;
   cursor: pointer;
 
   // &:hover .socialIcon {

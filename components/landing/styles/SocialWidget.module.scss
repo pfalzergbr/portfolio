@@ -1,14 +1,24 @@
 @import '../../../styles/abstracts/variables';
+@import '../../../styles/abstracts/mixins';
 
 .socialWidget {
   display: flex;
-  flex-direction: column;
+
   justify-content: flex-start;
 
-  grid-column: 2/3;
-  grid-row: 2/3;
-
+  grid-column: 1/2;
+  grid-row: 4/5;
+  
   & > a {
-    margin-bottom: $space-32;
+    margin-right: $space-32;
+  }
+  
+  @include tablet-landscape-up {
+    flex-direction: column;
+    grid-column: 2/3;
+    grid-row: 2/3;
+    & > a {
+      margin-bottom: $space-32;
+    }
   }
 }
