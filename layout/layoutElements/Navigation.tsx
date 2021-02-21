@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Menu from './Menu';
+import MenuDrawer from './MenuDrawer';
 import NavLink from './NavLink';
 import styles from './styles/Navigation.module.scss';
 
@@ -18,6 +19,7 @@ const Navigation: React.FC = () => {
       <nav className={styles.navigation}>
         <div className={styles.menuContainer}>
           <Menu isMenuOpen={isMenuOpen} toggleOpen={toggleOpen} />
+          {isMenuOpen && <MenuDrawer />}
         </div>
         <div className={styles.navlinkContainer}>
           <NavLink href='/' text='Home' />

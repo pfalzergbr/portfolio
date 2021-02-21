@@ -9,7 +9,7 @@ const Menu: React.FC<MenuProps> = ({ isMenuOpen, toggleOpen }) => {
   return (
     <div
       onClick={toggleOpen}
-      className={`${styles.menuBtn} ${isMenuOpen && styles.open}`}
+      className={`${styles.menuBtn} ${isMenuOpen ? styles.open : ''}`}
     >
       <div className={styles.burger}></div>
     </div>
