@@ -9,17 +9,16 @@ interface MenuDrawerProps {
 
 const MenuDrawer: React.FC<MenuDrawerProps> = ({ toggleOpen }) => {
   return (
-    <AnimatePresence>
-      <motion.div
-        initial='initial'
-        animate='enter'
-        exit='initial'
-        variants={drawerTransition}
-        className={styles.overlay}
-        onClick={toggleOpen}
-        key="menu"
-      >
-        <div className={styles.drawer}>
+    <>
+      <div className={styles.overlay} onClick={toggleOpen} key='menu'></div>
+      <AnimatePresence>
+        <motion.div
+          initial='initial'
+          animate='enter'
+          exit='exit'
+          variants={drawerTransition}
+          className={styles.drawer}
+        >
           <div className={styles.navlinkContainer}>
             <NavLink href='/' text='Home' />
             <NavLink href='/projects' text='Projects' />
@@ -27,9 +26,9 @@ const MenuDrawer: React.FC<MenuDrawerProps> = ({ toggleOpen }) => {
             <NavLink href='/contact' text='Contact' />
             <NavLink href='/about' text='About' />
           </div>
-        </div>
-      </motion.div>
-    </AnimatePresence>
+        </motion.div>
+      </AnimatePresence>
+    </>
   );
 };
 
