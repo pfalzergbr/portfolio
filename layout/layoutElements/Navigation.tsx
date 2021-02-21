@@ -19,7 +19,7 @@ const Navigation: React.FC = () => {
       <nav className={styles.navigation}>
         <div className={styles.menuContainer}>
           <Menu isMenuOpen={isMenuOpen} toggleOpen={toggleOpen} />
-          {isMenuOpen && <MenuDrawer />}
+          {isMenuOpen && <MenuDrawer toggleOpen={toggleOpen} />}
         </div>
         <div className={styles.navlinkContainer}>
           <NavLink href='/' text='Home' />
