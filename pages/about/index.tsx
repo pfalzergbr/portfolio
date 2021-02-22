@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import AnimatedRoute from '../../layout/AnimatedRoute';
 import indexStyles from './index.module.scss';
 import styles from '../../components/about/styles/Section.module.scss';
