@@ -1,11 +1,27 @@
 @import '../../../styles/abstracts/variables';
 
-.language_block {
+.language {
   margin-top: $space-96;
-
   grid-row: 3/4;
-}
 
-.language_list {
-  margin-top: $space-32;
+  &List {
+    margin-top: $space-32;
+  }
+
+  &Element {
+    display: flex;
+    font-size: $font-size-16;
+    margin-bottom: $space-sm-4;
+  }
+
+  &Name {
+    display: inline-block;
+    min-width: 9rem;
+    font-weight: 600;
+  }
+
+  &Description {
+    display: inline-block;
+    font-weight: 300;
+  }
 }
