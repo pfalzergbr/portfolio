@@ -1,0 +1,7 @@
+@import '../../styles/abstracts/mixins';
+
+.about {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  @include centered-container;
+}

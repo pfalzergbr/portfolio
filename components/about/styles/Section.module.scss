@@ -10,7 +10,8 @@
   &Title {
     font-size: $font-size-36;
     line-height: 4.2rem;
-    color: $color-orange-light;
+    font-weight: 400;
+    color: $color-orange-medium;
   }
 
   &Subheader {
@@ -26,7 +27,7 @@
   }
 
   &Content {
-    margin-top: $space-36;
+    margin-top: $space-32;
   }
 
   &Paragraph {
@@ -40,12 +41,12 @@
   }
 
   &Highlight {
-    color: $color-orange-light;
+    color: $color-orange-medium;
     font-size: $font-size-16;
   }
 
   &Link {
-    color: $color-orange-light;
+    color: $color-orange-medium;
     font-size: $font-size-16;
     text-decoration: underline;
     font-weight: 500;
