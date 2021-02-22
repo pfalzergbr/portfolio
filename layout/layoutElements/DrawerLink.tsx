@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router';
-import styles from './styles/DrawerLink.module.scss';
+import styles from './styles/Navigation.module.scss';
 export interface DrawerLinkProps {
   href: string;
   text: string;
