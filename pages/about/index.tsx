@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import AnimatedRoute from '../../layout/AnimatedRoute';
 import indexStyles from './index.module.scss';
 import styles from '../../components/about/styles/Section.module.scss';
@@ -9,24 +10,33 @@ export interface Props {}
 const About: React.FC<Props> = () => {
   return (
     <AnimatedRoute className={indexStyles.about}>
-      <Section title='About me' subtitle='Hey, nice to meet you!'>
+      {/* <div className={indexStyles.imageContainer}>
+        <Image
+          layout='intrinsic'
+          src='/images/profile.png'
+          alt='Photo of Gabor'
+          width={360}
+          height={480}
+        />
+      </div> */}
+      <Section title='About me'>
         <Subsection>
           <p className={styles.sectionParagraph}>
-            My name is Peter, or Gabor, whichewer you prefer. I am a self-taught
-            web developer, based in London. I am originally from Budapest, I
-            studied briefly in Japan, and have been living in the UK since 2012.
-            So far in my life, I have also been a Japanese teacher, briefly
-            worked as a self employed daytrader, did my fair share of
-            hospitality, and a lot of bar mangement. As you can see, I enjoy
-            learning new things.
+            My name is Peter, or Gabor, whichewer you prefer. I am a{' '}
+            <span className={styles.sectionHighlight}>
+              full stack web developer
+            </span>
+            , based in London. I am originally from Budapest, studied for a year
+            in Japan. I have been living in the UK since 2012. So far in my
+            life, I have also been a Japanese teacher, briefly worked as a self
+            employed daytrader, did my fair share of hospitality, and a lot of
+            bar mangement. As you can see, I enjoy learning new things.
           </p>
           <p className={styles.sectionParagraph}>
             Actively programming pretty much full time since early 2020, I am
             currently looking for my first tech position as a{' '}
-            <span className={styles.sectionHighlight}>
-              full-stack web developer.
-            </span>{' '}
-            My current stack is mainly{' '}
+            <span className={styles.sectionHighlight}>web developer.</span> My
+            current stack is mainly{' '}
             <span className={styles.sectionHighlight}>JavaScript</span> based, I
             am also spending a plenty of time with{' '}
             <span className={styles.sectionHighlight}>TypeScript</span>{' '}
