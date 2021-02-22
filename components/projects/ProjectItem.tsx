@@ -6,6 +6,7 @@ type ProjectStatus = 'finished' | 'ongoing' | 'onhold';
 export interface Project {
   id: string;
   slug: string;
+  priority: number;
   imageUrl: string;
   name: string;
   status: ProjectStatus;
@@ -19,6 +20,11 @@ export interface ProjectProps {
 
 const ProjectItem: React.FC<ProjectProps> = ({ project }) => {
   const { name, status, techBreadcrumbs, summary } = project;
+
+  const handleCheckDetails = () => {
+
+  }
+
   return (
     <article className={styles.project}>
       <div className={styles.projectImageContainer}>Image here</div>
@@ -36,10 +42,10 @@ const ProjectItem: React.FC<ProjectProps> = ({ project }) => {
       <p className={styles.projectSummary}>{summary}</p>
       <div className={styles.projectButtonContainer}>
         <Button buttonStyle={styles.projectButtonPrimary} text='Details' />
-        <Button
-          buttonStyle={styles.projectButtonSecondary}
-          text='Check out live'
-        />
+        <a
+          className={`btn ${styles.projectButtonSecondary}`}
+  
+        >Check out live</a>
       </div>
     </article>
   );
