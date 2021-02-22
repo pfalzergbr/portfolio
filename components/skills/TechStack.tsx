@@ -15,12 +15,12 @@ export interface TechStackProps {
 const TechStack: React.FC<TechStackProps> = ({ techStack }) => {
   const { languagesBlock, frontendBlock, backendBlock, otherBlock } = techStack;
   return (
-    <div className={styles.techStack_container}>
+    <div className={styles.techStackContainer}>
       <SkillHeader
         title='Skills & Stack'
         subtitle=''
       />
-      <div className={styles.techStack_grid}>
+      <div className={styles.techStackGrid}>
         <TechStackBlock techList={languagesBlock} />
         <TechStackBlock techList={frontendBlock} />
         <TechStackBlock techList={backendBlock} />
