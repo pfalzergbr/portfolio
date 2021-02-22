@@ -12,7 +12,7 @@ const ProjectGrid: React.FC<ProjectGridProps> = ({ projects }) => {
       <p className={styles.projectsGridDescription}></p>
       <div className={styles.projectsContainer}>
         {projects.map((project) => (
-          <ProjectItem project={project} />
+          <ProjectItem project={project} key={project.id} />
         ))}
       </div>
     </section>
