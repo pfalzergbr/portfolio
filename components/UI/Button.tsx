@@ -4,7 +4,7 @@ export interface ButtonProps extends React.ComponentPropsWithoutRef<'button'> {
 }
 
 const Button: React.FC<ButtonProps> = ({ buttonStyle, text, onClick }) => {
-  return <button onClick={onClick} className={`btn btn--${buttonStyle}`}>{text}</button>;
+  return <button onClick={onClick} className={`btn ${buttonStyle}`}>{text}</button>;
 };
 
 export default Button;
