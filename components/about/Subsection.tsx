@@ -10,7 +10,7 @@ const SubSection: React.FC<SubSectionProps> = ({title, children}) => {
   return ( 
   <>
     {title && <h3 className={styles.sectionSubheader}>{title}</h3>}
-    {children}
+    <div className={styles.sectionContent}>{children}</div>
   </>);
 }
  
