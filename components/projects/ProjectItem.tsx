@@ -1,11 +1,22 @@
 import Button from '../UI/Button';
-import styles from './styles/Project.module.scss';
+import styles from './styles/ProjectItem.module.scss';
 
-export interface ProjectProps {
-  project: object;
+type ProjectStatus = 'finished' | 'ongoing' | 'onhold'
+
+export interface Project {
+  id: string;
+  imageUrl: string;
+  name: string;
+  status: ProjectStatus;
+  techBreadcrumbs: string[];
+  summary: string
 }
 
-const Project: React.FC<ProjectProps> = ({ project }) => {
+export interface ProjectProps {
+  project: Project;
+}
+
+const ProjectItem: React.FC<ProjectProps> = ({ project }) => {
   const {} = project;
   return (
     <article className={styles.project}>
@@ -19,7 +30,7 @@ const Project: React.FC<ProjectProps> = ({ project }) => {
           <li className={styles.projectTechBreadcrumb}></li>
         </ul>
       </div>
-      <p className={styles.projectDescription}>
+      <p className={styles.projectSummary}>
         This is where all the random information comes about the{' '}
         <span className={styles.projectTechHighlight}>Node.js</span> project.
       </p>
@@ -31,4 +42,4 @@ const Project: React.FC<ProjectProps> = ({ project }) => {
   );
 };
 
-export default Project;
+export default ProjectItem;
