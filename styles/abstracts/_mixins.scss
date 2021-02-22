@@ -1,36 +1,36 @@
 // Breakpoints
 @mixin phone-only {
-  @media (max-width: 599px) { @content; }
+  @media (max-width: 599px) {
+    @content;
+  }
 }
 @mixin tablet-portrait-up {
-  @media (min-width: 600px) { @content; }
+  @media (min-width: 600px) {
+    @content;
+  }
 }
 @mixin tablet-landscape-up {
-  @media (min-width: 900px) { @content; }
+  @media (min-width: 900px) {
+    @content;
+  }
 }
 @mixin desktop-up {
-  @media (min-width: 1200px) { @content; }
+  @media (min-width: 1200px) {
+    @content;
+  }
 }
 @mixin large-desktop-up {
-  @media (min-width: 1800px) { @content; }
+  @media (min-width: 1800px) {
+    @content;
+  }
 }
 
-
-// // usage
-// .my-box {
-//   padding: 10px;
-  
-//   @include desktop-up {
-//     padding: 20px;
-//   }
-// }
-
-// Layout 
+// Layout
 
 @mixin centered-container {
-  width: 80%;  
+  width: 80%;
   margin: 0 auto;
-  
+
   @include tablet-landscape-up {
     width: 70%;
   }
@@ -44,17 +44,13 @@
   grid-column: 1/ -1;
 }
 
-
-
-// Components 
+// Components
 
 @mixin button-regular {
-  padding: .5em 1em;
+  padding: 0.5em 1em;
   color: $color-grey-dark;
   border: 1px solid $color-orange-medium;
   border-radius: 5rem;
   font-weight: 600;
 }
 // Transitions
-
-

@@ -5,6 +5,7 @@ import SkillHeader from './SkillHeader';
 import LanguageElement from './LanguageElement';
 
 // TODO - Extract to default props
+// Extract children, create a new SkillBlock element that is reusable for other skills.
 
 const LanguageBlock: React.FC = () => {
   return (

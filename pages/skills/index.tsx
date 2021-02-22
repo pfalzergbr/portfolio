@@ -10,6 +10,7 @@ import {
   otherBlock,
 } from '../../data/techData';
 import styles from './index.module.scss';
+import OtherSkillsBlock from '../../components/skills/OtherSkillsBlock';
 
 export interface SkillsProps {
   techStack: {
@@ -26,6 +27,7 @@ const Skills: React.FC<SkillsProps> = ({ techStack }) => {
       <>
         <TechStack techStack={techStack} />
         <LanguageBlock />
+        <OtherSkillsBlock />
       </>
     </AnimatedRoute>
   );
