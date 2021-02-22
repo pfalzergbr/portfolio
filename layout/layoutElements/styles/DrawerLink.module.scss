@@ -1,0 +1,37 @@
+@import '../../../styles/abstracts/variables';
+@import '../../../styles/abstracts/mixins';
+@import '../../../styles/base/typography';
+
+.navlink {
+  position: relative;
+  display: inline-block;
+  color: $color-off-white;
+  font-size: $font-size-36;
+  margin: 1.6rem 0;
+  padding-bottom: 1.2rem;
+  cursor: pointer;
+
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    border-bottom: 1px solid $color-orange-medium;
+    transition: 0.2s ease-out;
+  }
+
+  &:hover, &:focus {
+    color: $color-orange-medium;
+    
+    &:after {
+      width: 100%;
+    }
+
+  }
+}
+
+.active {
+  color: $color-orange-medium;
+
+}

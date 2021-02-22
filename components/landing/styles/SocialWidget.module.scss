@@ -13,7 +13,7 @@
     margin-right: $space-32;
   }
   
-  @include tablet-landscape-up {
+  @include desktop-up {
     flex-direction: column;
     grid-column: 2/3;
     grid-row: 2/3;

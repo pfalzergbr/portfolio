@@ -1,0 +1,13 @@
+@import '../../../styles/abstracts/variables';
+@import '../../../styles/abstracts/mixins';
+
+.otherSkillsBlock {
+  margin-top: $space-96;
+  grid-row: 4/5;
+  grid-column: 1/2;
+  
+  @include tablet-landscape-up {
+    grid-row:3/4;
+    grid-column: 3/4;
+  }
+}

@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { AnimatePresence } from 'framer-motion';
 import Menu from './Menu';
 import MenuDrawer from './MenuDrawer';
 import NavLink from './NavLink';
@@ -11,7 +12,7 @@ const Navigation: React.FC = () => {
 
   const toggleOpen = () => {
     setIsMenuOpen(!isMenuOpen);
-  }
+  };
 
   return (
     <>
@@ -19,7 +20,17 @@ const Navigation: React.FC = () => {
       <nav className={styles.navigation}>
         <div className={styles.menuContainer}>
           <Menu isMenuOpen={isMenuOpen} toggleOpen={toggleOpen} />
-          {isMenuOpen && <MenuDrawer toggleOpen={toggleOpen} />}
+          {isMenuOpen && (
+            <div
+              className={styles.overlay}
+              onClick={toggleOpen}
+              key='menu'
+            ></div>
+          )}
+
+          <AnimatePresence>
+            {isMenuOpen && <MenuDrawer toggleOpen={toggleOpen} />}
+          </AnimatePresence>
         </div>
         <div className={styles.navlinkContainer}>
           <NavLink href='/' text='Home' />
