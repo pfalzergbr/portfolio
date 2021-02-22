@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { routeTransition } from '../transitions/routeTransition';
 
 export interface AnimatedRouteProps {
-  children: JSX.Element;
+  children: React.ReactNode;
   className?: string;
 }
 

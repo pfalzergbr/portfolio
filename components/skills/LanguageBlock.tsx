@@ -9,14 +9,14 @@ import LanguageElement from './LanguageElement';
 
 const LanguageBlock: React.FC = () => {
   return (
-    <div className={styles.language_block}>
+    <div className={styles.language}>
       <SkillHeader title='Languages' subtitle='' />
       <AnimatePresence>
         <motion.div
           variants={fadeInGroup}
           initial='hidden'
           animate='show'
-          className={styles.language_list}
+          className={styles.languageList}
         >
           <LanguageElement
             language='English'

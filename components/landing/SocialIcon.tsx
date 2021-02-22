@@ -7,7 +7,7 @@ export interface SocialIconProps {
 
 const SocialIcon: React.FC<SocialIconProps> = ({ logo, url }) => {
   return (
-    <a href={url} className={styles.socialIcon_container}>
+    <a href={url} className={styles.socialIconContainer}>
       <svg className={styles.socialIcon} focusable={true}>
         <use href={`/social/sprite.svg#social-${logo}`}></use>
       </svg>

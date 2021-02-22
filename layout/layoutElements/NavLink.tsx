@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import styles from './styles/NavLink.module.scss';
+import styles from './styles/Navigation.module.scss';
 
 
 export interface NavLinkProps { href: string; text: string}
