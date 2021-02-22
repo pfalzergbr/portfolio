@@ -7,6 +7,7 @@ const About: React.FC<Props> = () => {
   return (
     <AnimatedRoute className="">
       <UnderConstruction />
+
     </AnimatedRoute>
   );
 };

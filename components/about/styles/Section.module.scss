@@ -1,0 +1,55 @@
+@import '../../../styles//abstracts/variables';
+@import '../../../styles//abstracts/mixins';
+
+.section {
+  max-width: 55rem;
+  margin-bottom: $space-96;
+  font-weight: 400;
+  line-height: 2.4rem;
+
+  &Title {
+    font-size: $font-size-36;
+    line-height: 4.2rem;
+    color: $color-orange-light;
+  }
+
+  &Subheader {
+    font-size: $font-size-24;
+    line-height: 3.2rem;
+    margin-bottom: $space-16;
+  }
+
+  &Subtitle {
+    font-size: $font-size-16;
+    font-weight: 300;
+    color: $color-off-white;
+  }
+
+  &Content {
+    margin-top: $space-36;
+  }
+
+  &Paragraph {
+    font-size: $font-size-16;
+    color: $color-off-white;
+    margin-bottom: $space-24;
+
+    &Bold {
+      font-weight: 500;
+    }
+  }
+
+  &Highlight {
+    color: $color-orange-light;
+    font-size: $font-size-16;
+  }
+
+  &Link {
+    color: $color-orange-light;
+    font-size: $font-size-16;
+    text-decoration: underline;
+    font-weight: 500;
+  }
+}
+
+
