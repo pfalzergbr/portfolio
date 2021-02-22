@@ -1,7 +1,7 @@
-import { motion, AnimatePresence } from 'framer-motion';
-import NavLink from './NavLink';
+import { motion } from 'framer-motion';
 import { drawerTransition } from '../../transitions/drawerTransition';
 import styles from './styles/MenuDrawer.module.scss';
+import DrawerLink from './DrawerLink';
 
 interface MenuDrawerProps {
   toggleOpen: () => void;
@@ -10,24 +10,25 @@ interface MenuDrawerProps {
 const MenuDrawer: React.FC<MenuDrawerProps> = ({ toggleOpen }) => {
   return (
     <>
-      <div className={styles.overlay} onClick={toggleOpen} key='menu'></div>
-      <AnimatePresence>
-        <motion.div
-          initial='initial'
-          animate='enter'
-          exit='exit'
-          variants={drawerTransition}
-          className={styles.drawer}
-        >
-          <div className={styles.navlinkContainer}>
-            <NavLink href='/' text='Home' />
-            <NavLink href='/projects' text='Projects' />
-            <NavLink href='/skills' text='Skills' />
-            <NavLink href='/contact' text='Contact' />
-            <NavLink href='/about' text='About' />
-          </div>
-        </motion.div>
-      </AnimatePresence>
+      <motion.div
+        initial='initial'
+        animate='enter'
+        exit='exit'
+        variants={drawerTransition}
+        className={styles.drawer}
+      >
+        <div className={styles.navlinkContainer}>
+          <DrawerLink toggleOpen={toggleOpen} href='/' text='Home' />
+          <DrawerLink
+            toggleOpen={toggleOpen}
+            href='/projects'
+            text='Projects'
+          />
+          <DrawerLink toggleOpen={toggleOpen} href='/skills' text='Skills' />
+          <DrawerLink toggleOpen={toggleOpen} href='/contact' text='Contact' />
+          <DrawerLink toggleOpen={toggleOpen} href='/about' text='About' />
+        </div>
+      </motion.div>
     </>
   );
 };
