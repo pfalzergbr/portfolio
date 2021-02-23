@@ -4,11 +4,15 @@
 .projectsGrid {
   @include centered-container;
   display: grid;
+  max-width: 90%;
   grid-row-gap: $space-56;
-  grid-template-rows: max-content;
-  grid-auto-rows: max-content;
+  grid-template-rows: min-content;
+  grid-auto-rows: min-content;
   margin-bottom: $space-96;
-  
+
+  @include tablet-landscape-up {
+    max-width: 80%;
+  }
 
   &Header {
     font-size: $font-size-36;
@@ -16,10 +20,14 @@
     color: $color-orange-medium;
     font-weight: 400;
   }
-
+  
   &Description {
-    max-width: 60rem;
+    max-width: 40rem;
     margin-top: $space-sm-8;
+
+    @include tablet-landscape-up {
+      max-width: 60rem;
+    }
   }
 
   &Container {
@@ -32,8 +40,15 @@
 
 .project {
   display: grid;
-  grid-template-columns: 40rem max-content;
-  grid-column-gap: $space-56;
+  // grid-template-columns: 40rem max-content;
+  grid-row-gap: $space-32;
+  
+  @include tablet-landscape-up{
+    grid-row-gap: $space-56;
+    grid-template-columns: 40rem max-content;
+    grid-column-gap: $space-56;
+    grid-row-gap: 0;
+  }
 
   &ImageContainer {
     grid-column: 1/2;
@@ -41,10 +56,20 @@
     height: 28rem;
     background-color: $color-grey-light;
     border-radius: 1rem;
+    
+    @include tablet-landscape-up{
+      width: 40rem;
+      height: 28rem;
+    }
   }
 
-  &ProjectContainer {
-    grid-column: 2/3;
+  &Container {
+   width: 40rem;
+        
+    @include tablet-landscape-up{
+      width: 52rem;
+      grid-column: 2/3;
+    }
   }
 
   &Header {
@@ -52,6 +77,7 @@
     justify-content: flex-start;
     align-items: center;
   }
+
   &Name {
     color: $color-orange-medium;
     font-weight: 400;
@@ -81,6 +107,7 @@
       margin-bottom: $space-sm-4;
     }
     &Highlight {
+      color: $color-orange-medium;
     }
   }
 

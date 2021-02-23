@@ -28,11 +28,11 @@
 // Layout
 
 @mixin centered-container {
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
 
   @include tablet-landscape-up {
-    width: 70%;
+    width: 80%;
   }
 }
 
