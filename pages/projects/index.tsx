@@ -19,7 +19,7 @@ const Portfolio: React.FC<Props> = ({ projects }) => {
         description='Full Stack Applications and more complex, longer projects I tend to spend more time with.'
       />
       <ProjectGrid
-        projects={projects}
+        projects={[]}
         header='Learning & Practice'
         description='I really enjoy learning new technologies. These are short, fun projects I build specifically for picking up, or practice new technologies.'
       />

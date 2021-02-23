@@ -26,23 +26,20 @@ const ProjectItem: React.FC<ProjectProps> = ({ project }) => {
   return (
     <article className={styles.project}>
       <div className={styles.projectImageContainer}></div>
-      <div className={styles.projectContainer}>
-        <div className={styles.projectHeader}>
-          <h3 className={styles.projectName}>{name}</h3>
-          <span className={styles.projectStatus}>{status}</span>
-        </div>
-        <ul className={styles.projectTech}>
-          {techBreadcrumbs.map((breadcrumb) => (
-            <li className={styles.projectTechBreadcrumb}>{breadcrumb}</li>
-          ))}
-        </ul>
-        <p className={styles.projectSummary}>{summary}</p>
-        <div className={styles.projectButtonContainer}>
-          <Button buttonStyle={styles.projectButtonPrimary} text='Details' />
-          <a className={`${styles.projectButtonSecondary}`}>
-            Check out live
-          </a>
-        </div>
+
+      <div className={styles.projectHeader}>
+        <h3 className={styles.projectName}>{name}</h3>
+        <span className={styles.projectStatus}>{status}</span>
+      </div>
+      <ul className={styles.projectTech}>
+        {techBreadcrumbs.map((breadcrumb) => (
+          <li className={styles.projectTechBreadcrumb}>{breadcrumb}</li>
+        ))}
+      </ul>
+      <p className={styles.projectSummary}>{summary}</p>
+      <div className={styles.projectButtonContainer}>
+        <Button buttonStyle={styles.projectButtonPrimary} text='Details' />
+        <a className={`${styles.projectButtonSecondary}`}>Check out live</a>
       </div>
     </article>
   );
