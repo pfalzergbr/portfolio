@@ -5,14 +5,15 @@
   @include centered-container;
   display: grid;
   max-width: 90%;
-  grid-row-gap: $space-32;
   grid-template-rows: min-content;
   grid-auto-rows: min-content;
+  grid-row-gap: $space-32;
   margin-bottom: $space-96;
+  // align-items: center;
 
   @include tablet-landscape-up {
     max-width: 80%;
-    grid-row-gap: $space-56;
+    // grid-row-gap: $space-56;
   }
 
   &Header {
@@ -34,8 +35,10 @@
   &Container {
     display: grid;
     grid-template-rows: max-content;
+    grid-template-columns: repeat(auto-fit, 40rem);
     grid-auto-rows: max-content;
     grid-row-gap: $space-96;
+    grid-column-gap: $space-56;
 
     @include tablet-landscape-up {
       grid-row-gap: $space-56;
@@ -45,7 +48,9 @@
 
 .project {
   display: grid;
-  grid-template-columns: min-content;
+  // grid-template-columns: min-content;
+  grid-template-rows: repeat(4, min-content) 1fr;
+  align-items: start;
   grid-row-gap: $space-sm-8;
 
   // @include tablet-landscape-up{
@@ -84,7 +89,7 @@
 
   &Header {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
   }
 
@@ -97,7 +102,7 @@
 
   &Status {
     font-weight: 300;
-    margin-left: $space-16;
+    margin-left: $space-24;
   }
 
   &Tech {
@@ -135,6 +140,7 @@
     grid-column-gap: $space-16;
     width: 100%;
     margin-top: $space-24;
+    align-self: end;
   }
 
   &Button {

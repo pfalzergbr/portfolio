@@ -37,4 +37,22 @@ export const projects = [
     summary:
       'My portfolio site, that you are looking at right now. Built with TypeScript and Next.JS. Fetching GraphQL data from a Strapi headless CMS, and generates the page as a static site.',
   },
+  {
+    id: '2',
+    slug: 'portfolio',
+    priority: '2',
+    imageUrl: 'none',
+    name: 'Portfolio',
+    status: 'Ongoing',
+    techBreadcrumbs: [
+      'TypeScript',
+      'Next.js',
+      'Sass',
+      'CSS Modules',
+      'GraphQL',
+      'Strapi',
+    ],
+    summary:
+      'My portfolio site, that you are looking at right now. Built with TypeScript and Next.JS. Fetching GraphQL data from a Strapi headless CMS, and generates the page as a static site.',
+  },
 ];

@@ -32,8 +32,8 @@ const ProjectItem: React.FC<ProjectProps> = ({ project }) => {
         <span className={styles.projectStatus}>{status}</span>
       </div>
       <ul className={styles.projectTech}>
-        {techBreadcrumbs.map((breadcrumb) => (
-          <li className={styles.projectTechBreadcrumb}>{breadcrumb}</li>
+        {techBreadcrumbs.map((breadcrumb, index) => (
+          <li className={styles.projectTechBreadcrumb} key={breadcrumb + index}>{breadcrumb}</li>
         ))}
       </ul>
       <p className={styles.projectSummary}>{summary}</p>
