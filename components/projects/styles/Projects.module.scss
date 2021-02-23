@@ -5,13 +5,14 @@
   @include centered-container;
   display: grid;
   max-width: 90%;
-  grid-row-gap: $space-56;
+  grid-row-gap: $space-32;
   grid-template-rows: min-content;
   grid-auto-rows: min-content;
   margin-bottom: $space-96;
-
+  
   @include tablet-landscape-up {
     max-width: 80%;
+    grid-row-gap: $space-56;
   }
 
   &Header {
@@ -34,14 +35,18 @@
     display: grid;
     grid-template-rows: max-content;
     grid-auto-rows: max-content;
-    grid-row-gap: $space-56;
+    grid-row-gap: $space-96;
+
+    @include tablet-landscape-up {
+      grid-row-gap: $space-56;
+    }
   }
 }
 
 .project {
   display: grid;
   // grid-template-columns: 40rem max-content;
-  grid-row-gap: $space-32;
+  grid-row-gap: $space-24;
   
   @include tablet-landscape-up{
     grid-row-gap: $space-56;
