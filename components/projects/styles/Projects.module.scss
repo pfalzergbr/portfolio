@@ -9,7 +9,7 @@
   grid-template-rows: min-content;
   grid-auto-rows: min-content;
   margin-bottom: $space-96;
-  
+
   @include tablet-landscape-up {
     max-width: 80%;
     grid-row-gap: $space-56;
@@ -21,7 +21,7 @@
     color: $color-orange-medium;
     font-weight: 400;
   }
-  
+
   &Description {
     max-width: 40rem;
     margin-top: $space-sm-8;
@@ -47,43 +47,35 @@
   display: grid;
   grid-template-columns: min-content;
   grid-row-gap: $space-sm-8;
-  
-  @include tablet-landscape-up{
-    grid-row-gap: $space-56;
-    grid-template-rows: repeat(4, min-content);
-    grid-template-columns: 40rem max-content;
-    grid-column-gap: $space-56;
-    grid-row-gap: 0;
-  }
 
-  // display: grid;
-  // // grid-template-columns: 40rem max-content;
-  // grid-row-gap: $space-24;
-  
   // @include tablet-landscape-up{
   //   grid-row-gap: $space-56;
+  //   grid-template-rows: repeat(4, min-content);
   //   grid-template-columns: 40rem max-content;
+  //   grid-row-gap: $space-sm-8;
   //   grid-column-gap: $space-56;
   //   grid-row-gap: 0;
+  //   align-items: center;
   // }
 
   &ImageContainer {
     grid-column: 1/2;
+    grid-row: 2/3;
     width: 40rem;
     height: 28rem;
     background-color: $color-grey-light;
     border-radius: 1rem;
-    
-    @include tablet-landscape-up{
-      width: 40rem;
-      height: 28rem;
-      grid-row: 1/5;
-    }
+
+    // @include tablet-landscape-up{
+    //   width: 40rem;
+    //   height: 28rem;
+    //   grid-row: 1/5;
+    // }
   }
 
   // &Container {
   //  width: 40rem;
-        
+
   //   @include tablet-landscape-up{
   //     width: 52rem;
   //     grid-column: 2/3;
@@ -92,7 +84,7 @@
 
   &Header {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
   }
 
@@ -105,7 +97,7 @@
 
   &Status {
     font-weight: 300;
-    margin-left: $space-32;
+    margin-left: $space-16;
   }
 
   &Tech {
@@ -114,15 +106,18 @@
     padding-left: 0;
     max-width: 52rem;
     flex-wrap: wrap;
-    margin-bottom: $space-12;
+    margin: 0;
+    margin-top: $space-sm-4;
+    // margin-bottom: $space-12;
 
     &Breadcrumb {
       font-size: $font-size-10;
       background-color: $color-grey-light;
-      margin-right: $space-sm-8;
-      padding: 0 $space-16;
+      margin-right: 0.2rem;
+      padding: 0 $space-sm-8;
       border-radius: 1rem;
       margin-bottom: $space-sm-4;
+      line-height: 1.8rem;
     }
     &Highlight {
       color: $color-orange-medium;
@@ -130,24 +125,26 @@
   }
 
   &Summary {
-    max-width: 52rem;
+    max-width: 40rem;
+    // margin: 0;
   }
 
   &ButtonContainer {
     display: grid;
-    grid-template-columns: repeat(2, max-content);
+    grid-template-columns: repeat(2, 1fr);
     grid-column-gap: $space-16;
+    width: 100%;
+    margin-top: $space-24;
   }
 
   &Button {
-    margin-top: $space-32;
-
     &Primary {
       @include button-regular;
       color: $color-grey-dark;
       background-color: $color-orange-medium;
       border: 1px solid $color-orange-medium;
       height: 4.2rem;
+
       &:hover,
       &:focus {
         background: $color-off-white;

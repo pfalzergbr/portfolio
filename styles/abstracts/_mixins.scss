@@ -48,6 +48,7 @@
 
 @mixin button-regular {
   font-family: 'Lato';
+  text-align: center;
   display: inline-block;
   font-size: $font-size-16;
   padding: .8rem 1.6rem;
