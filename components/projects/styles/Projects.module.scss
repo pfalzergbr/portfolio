@@ -1,0 +1,109 @@
+@import '../../../styles//abstracts/variables';
+@import '../../../styles//abstracts/mixins';
+
+.projectsGrid {
+  @include centered-container;
+  display: grid;
+  grid-row-gap: $space-56;
+  grid-template-rows: max-content;
+  grid-auto-rows: max-content;
+  
+
+  &Header {
+    font-size: $font-size-36;
+    line-height: 4.2rem;
+    color: $color-orange-medium;
+    font-weight: 400;
+  }
+
+  &Description {
+    margin-top: $space-sm-8;
+  }
+
+  &Container {
+    display: grid;
+    grid-template-rows: max-content;
+    grid-auto-rows: max-content;
+    grid-row-gap: $space-56;
+  }
+}
+
+.project {
+  display: grid;
+  grid-template-columns: 40rem max-content;
+  grid-column-gap: $space-56;
+
+  &ImageContainer {
+    grid-column: 1/2;
+    width: 40rem;
+    height: 28rem;
+    background-color: $color-grey-light;
+    border-radius: 1rem;
+  }
+
+  &ProjectContainer {
+    grid-column: 2/3;
+  }
+
+  &Header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  &Name {
+    color: $color-orange-medium;
+    font-weight: 400;
+    font-size: $font-size-24;
+    line-height: 3.2rem;
+  }
+
+  &Status {
+    font-weight: 300;
+    margin-left: $space-32;
+  }
+
+  &Tech {
+    list-style: none;
+    display: flex;
+    padding-left: 0;
+    max-width: 52rem;
+    flex-wrap: wrap;
+    margin-bottom: $space-12;
+
+    &Breadcrumb {
+      font-size: $font-size-10;
+      background-color: $color-grey-light;
+      margin-right: $space-sm-8;
+      padding: 0 $space-16;
+      border-radius: 1rem;
+      margin-bottom: $space-sm-4;
+    }
+    &Highlight {
+    }
+  }
+
+  &Summary {
+    max-width: 52rem;
+  }
+
+  &ButtonContainer {
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    grid-column-gap: $space-16;
+  }
+
+  &Button {
+    margin-top: $space-32;
+
+    &Primary {
+      @include button-regular;
+      color: $color-grey-dark;
+      background-color: $color-orange-medium;
+      border: 1px solid $color-orange-medium;
+      height: 4.2rem;
+    }
+    &Secondary {
+      @include button-regular;
+    }
+  }
+}

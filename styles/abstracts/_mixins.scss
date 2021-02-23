@@ -47,9 +47,12 @@
 // Components
 
 @mixin button-regular {
-  padding: 0.5em 1em;
-  color: $color-grey-dark;
-  border: 1px solid $color-orange-medium;
+  font-family: 'Lato';
+  display: inline-block;
+  font-size: $font-size-16;
+  padding: .8rem 1.6rem;
+  color: $color-off-white;
+  border: 1px solid $color-off-white;
   border-radius: 5rem;
   font-weight: 600;
 }
