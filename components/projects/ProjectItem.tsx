@@ -1,5 +1,5 @@
 import Button from '../UI/Button';
-import styles from './styles/ProjectItem.module.scss';
+import styles from './styles/Projects.module.scss';
 
 type ProjectStatus = 'finished' | 'ongoing' | 'onhold';
 
@@ -21,13 +21,11 @@ export interface ProjectProps {
 const ProjectItem: React.FC<ProjectProps> = ({ project }) => {
   const { name, status, techBreadcrumbs, summary } = project;
 
-  const handleCheckDetails = () => {
-
-  }
+  const handleCheckDetails = () => {};
 
   return (
     <article className={styles.project}>
-      <div className={styles.projectImageContainer}>Image here</div>
+      <div className={styles.projectImageContainer}></div>
       <div className={styles.projectContainer}>
         <div className={styles.projectHeader}>
           <h3 className={styles.projectName}>{name}</h3>
@@ -38,14 +36,13 @@ const ProjectItem: React.FC<ProjectProps> = ({ project }) => {
             <li className={styles.projectTechBreadcrumb}>{breadcrumb}</li>
           ))}
         </ul>
-      </div>
-      <p className={styles.projectSummary}>{summary}</p>
-      <div className={styles.projectButtonContainer}>
-        <Button buttonStyle={styles.projectButtonPrimary} text='Details' />
-        <a
-          className={`btn ${styles.projectButtonSecondary}`}
-  
-        >Check out live</a>
+        <p className={styles.projectSummary}>{summary}</p>
+        <div className={styles.projectButtonContainer}>
+          <Button buttonStyle={styles.projectButtonPrimary} text='Details' />
+          <a className={`${styles.projectButtonSecondary}`}>
+            Check out live
+          </a>
+        </div>
       </div>
     </article>
   );

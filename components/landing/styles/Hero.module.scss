@@ -37,19 +37,15 @@
   }
 
   &Cta {
-    font-family: 'Lato';
-    // margin-top: $space-32;
-    display: inline-block;
-    background: $color-orange-medium;
-    font-size: $font-size-16;
     @include button-regular;
-    // transition: 0.2s ease-out;
+    color: $color-grey-dark;
+    border: 1px solid $color-orange-medium;
+    background: $color-orange-medium;
 
     &:hover,
     &:focus {
       background: $color-off-white;
       border: 1px solid $color-off-white;
-      // transform: translateY(-1px);
       outline: none;
     }
   }
