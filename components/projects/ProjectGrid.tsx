@@ -15,7 +15,7 @@ const ProjectGrid: React.FC<ProjectGridProps> = ({
   return (
     <section className={styles.projectsGrid}>
       <div>
-        <h2 className={styles.projectsGridHeader}>{header}</h2>
+        <h1 className={styles.projectsGridHeader}>{header}</h1>
         <p className={styles.projectsGridDescription}>{description}</p>
       </div>
       <div className={styles.projectsGridContainer}>

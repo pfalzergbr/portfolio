@@ -9,16 +9,15 @@
   grid-auto-rows: min-content;
   grid-row-gap: $space-32;
   margin-bottom: $space-96;
-  // align-items: center;
+
 
   @include tablet-landscape-up {
     max-width: 80%;
-    // grid-row-gap: $space-56;
   }
 
   &Header {
-    font-size: $font-size-36;
-    line-height: 4.2rem;
+    font-size: $font-size-54;
+    line-height: 6.2rem;
     color: $color-orange-medium;
     font-weight: 400;
   }
@@ -48,20 +47,9 @@
 
 .project {
   display: grid;
-  // grid-template-columns: min-content;
   grid-template-rows: repeat(4, min-content) 1fr;
   align-items: start;
   grid-row-gap: $space-sm-8;
-
-  // @include tablet-landscape-up{
-  //   grid-row-gap: $space-56;
-  //   grid-template-rows: repeat(4, min-content);
-  //   grid-template-columns: 40rem max-content;
-  //   grid-row-gap: $space-sm-8;
-  //   grid-column-gap: $space-56;
-  //   grid-row-gap: 0;
-  //   align-items: center;
-  // }
 
   &ImageContainer {
     grid-column: 1/2;
@@ -70,22 +58,7 @@
     height: 28rem;
     background-color: $color-grey-light;
     border-radius: 1rem;
-
-    // @include tablet-landscape-up{
-    //   width: 40rem;
-    //   height: 28rem;
-    //   grid-row: 1/5;
-    // }
   }
-
-  // &Container {
-  //  width: 40rem;
-
-  //   @include tablet-landscape-up{
-  //     width: 52rem;
-  //     grid-column: 2/3;
-  //   }
-  // }
 
   &Header {
     display: flex;
@@ -113,7 +86,6 @@
     flex-wrap: wrap;
     margin: 0;
     margin-top: $space-sm-4;
-    // margin-bottom: $space-12;
 
     &Breadcrumb {
       font-size: $font-size-10;
@@ -139,7 +111,6 @@
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: $space-16;
     width: 100%;
-    margin-top: $space-24;
     align-self: end;
   }
 
