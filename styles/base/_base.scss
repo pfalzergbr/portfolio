@@ -3,9 +3,15 @@
 html {
   font-size: 50%;
 
+  @media (max-width:360px) {
+    font-size: 37.5%;
+  }
+
   @include desktop-up{
     font-size: 62.5%;
   }
+
+
 }
 
 html,

@@ -5,23 +5,26 @@
   @include centered-container;
   display: grid;
   max-width: 90%;
-  grid-row-gap: $space-32;
   grid-template-rows: min-content;
   grid-auto-rows: min-content;
+  grid-row-gap: $space-32;
   margin-bottom: $space-96;
-  
+
+
   @include tablet-landscape-up {
     max-width: 80%;
-    grid-row-gap: $space-56;
   }
 
   &Header {
-    font-size: $font-size-36;
-    line-height: 4.2rem;
+    font-size: $font-size-54;
+    line-height: 6.2rem;
     color: $color-orange-medium;
     font-weight: 400;
+    @include phone-only {
+      width: 40rem;
+    }
   }
-  
+
   &Description {
     max-width: 40rem;
     margin-top: $space-sm-8;
@@ -34,8 +37,10 @@
   &Container {
     display: grid;
     grid-template-rows: max-content;
+    grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
     grid-auto-rows: max-content;
     grid-row-gap: $space-96;
+    grid-column-gap: $space-24;
 
     @include tablet-landscape-up {
       grid-row-gap: $space-56;
@@ -45,36 +50,17 @@
 
 .project {
   display: grid;
-  // grid-template-columns: 40rem max-content;
-  grid-row-gap: $space-24;
-  
-  @include tablet-landscape-up{
-    grid-row-gap: $space-56;
-    grid-template-columns: 40rem max-content;
-    grid-column-gap: $space-56;
-    grid-row-gap: 0;
-  }
+  grid-template-rows: repeat(4, min-content) 1fr;
+  align-items: start;
+  grid-row-gap: $space-sm-8;
 
   &ImageContainer {
     grid-column: 1/2;
+    grid-row: 2/3;
     width: 40rem;
     height: 28rem;
     background-color: $color-grey-light;
     border-radius: 1rem;
-    
-    @include tablet-landscape-up{
-      width: 40rem;
-      height: 28rem;
-    }
-  }
-
-  &Container {
-   width: 40rem;
-        
-    @include tablet-landscape-up{
-      width: 52rem;
-      grid-column: 2/3;
-    }
   }
 
   &Header {
@@ -92,7 +78,7 @@
 
   &Status {
     font-weight: 300;
-    margin-left: $space-32;
+    margin-left: $space-24;
   }
 
   &Tech {
@@ -101,15 +87,17 @@
     padding-left: 0;
     max-width: 52rem;
     flex-wrap: wrap;
-    margin-bottom: $space-12;
+    margin: 0;
+    margin-top: $space-sm-4;
 
     &Breadcrumb {
       font-size: $font-size-10;
       background-color: $color-grey-light;
-      margin-right: $space-sm-8;
-      padding: 0 $space-16;
+      margin-right: 0.2rem;
+      padding: 0 $space-sm-8;
       border-radius: 1rem;
       margin-bottom: $space-sm-4;
+      line-height: 1.8rem;
     }
     &Highlight {
       color: $color-orange-medium;
@@ -117,24 +105,27 @@
   }
 
   &Summary {
-    max-width: 52rem;
+    // width: 100%;
+    max-width: 40rem;
+    // margin: 0;
   }
 
   &ButtonContainer {
     display: grid;
-    grid-template-columns: repeat(2, max-content);
+    grid-template-columns: repeat(2, 1fr);
     grid-column-gap: $space-16;
+    width: 40rem;
+    align-self: end;
   }
 
   &Button {
-    margin-top: $space-32;
-
     &Primary {
       @include button-regular;
       color: $color-grey-dark;
       background-color: $color-orange-medium;
       border: 1px solid $color-orange-medium;
       height: 4.2rem;
+
       &:hover,
       &:focus {
         background: $color-off-white;

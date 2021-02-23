@@ -3,7 +3,7 @@
 
 .skills {
   display: grid;
-  grid-template-rows: 1.6rem repeat(3, max-content);
+  grid-template-rows: repeat(3, max-content);
   grid-template-columns: 100%;
   // grid-row: 2/3;
   
@@ -11,6 +11,6 @@
   
   @include tablet-portrait-up {
     grid-template-columns: max-content 1fr max-content;
-    grid-template-rows: 1.6rem repeat(2, max-content);
+    grid-template-rows: repeat(2, max-content);
   }
 }
