@@ -7,6 +7,7 @@
   grid-row-gap: $space-56;
   grid-template-rows: max-content;
   grid-auto-rows: max-content;
+  margin-bottom: $space-96;
   
 
   &Header {
@@ -17,6 +18,7 @@
   }
 
   &Description {
+    max-width: 60rem;
     margin-top: $space-sm-8;
   }
 
@@ -101,9 +103,22 @@
       background-color: $color-orange-medium;
       border: 1px solid $color-orange-medium;
       height: 4.2rem;
+      &:hover,
+      &:focus {
+        background: $color-off-white;
+        border: 1px solid $color-off-white;
+        outline: none;
+      }
     }
     &Secondary {
       @include button-regular;
+      &:hover,
+      &:focus {
+        color: $color-grey-dark;
+        background: $color-off-white;
+        border: 1px solid $color-off-white;
+        outline: none;
+      }
     }
   }
 }
