@@ -2,6 +2,8 @@ import Link from 'next/link';
 import styles from './styles/TechModal.module.scss';
 import TechIcon from './TechIcon';
 
+//Add connection
+
 export interface TechModalProps {}
 
 const TechModal: React.FC<TechModalProps> = () => {
