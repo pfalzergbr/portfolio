@@ -3,7 +3,7 @@
 
 .section {
   max-width: 55rem;
-  margin-bottom: $space-96;
+  margin-bottom: $space-56;
   font-weight: 400;
   line-height: 2.4rem;
 
@@ -50,6 +50,7 @@
   }
 
   &Link {
+    display: inline-block;
     color: $color-orange-medium;
     font-size: $font-size-16;
     text-decoration: underline;
@@ -58,3 +59,6 @@
 }
 
 
+.image {
+  border-radius: 1rem;
+}

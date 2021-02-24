@@ -1,3 +1,5 @@
+import Image from 'next/image';
+import Link from 'next/link';
 import AnimatedRoute from '../../layout/AnimatedRoute';
 import indexStyles from './index.module.scss';
 import styles from '../../components/about/styles/Section.module.scss';
@@ -9,15 +11,17 @@ export interface Props {}
 const About: React.FC<Props> = () => {
   return (
     <AnimatedRoute className={indexStyles.about}>
-      {/* <div className={indexStyles.imageContainer}>
+      <div className={indexStyles.imageContainer}>
         <Image
-          layout='intrinsic'
+          className={styles.image}
+          // layout='responsive'
           src='/images/profile.png'
           alt='Photo of Gabor'
-          width={360}
-          height={480}
+          width={945}
+          height={945}
+          objectFit='contain'
         />
-      </div> */}
+      </div>
       <Section title='About me'>
         <Subsection>
           <p className={styles.sectionParagraph}>
@@ -26,10 +30,10 @@ const About: React.FC<Props> = () => {
               full stack web developer
             </span>
             , based in London. I am originally from Budapest, studied for a year
-            in Japan. I have been living in the UK since 2012. So far in my
-            life, I have also been a Japanese teacher, briefly worked as a self
-            employed daytrader, did my fair share of hospitality, and a lot of
-            bar mangement. As you can see, I enjoy learning new things.
+            in Japan, living in the UK since 2012. So far in my life, I have
+            also been a Japanese teacher, briefly worked as a self employed
+            daytrader, did my fair share of hospitality, and a lot of bar
+            mangement. As you can see, I enjoy learning new things.
           </p>
           <p className={styles.sectionParagraph}>
             Actively programming pretty much full time since early 2020, I am
@@ -43,9 +47,9 @@ const About: React.FC<Props> = () => {
             <span className={styles.sectionHighlight}>React</span> and{' '}
             <span className={styles.sectionHighlight}>Vue</span>,{' '}
             <span className={styles.sectionHighlight}>HTML</span> and{' '}
-            <span className={styles.sectionHighlight}>CSS</span>, styling with
+            <span className={styles.sectionHighlight}>CSS</span>, styling with{' '}
             <span className={styles.sectionHighlight}>Sass</span>. I build{' '}
-            <span className={styles.sectionHighlight}>REST</span>ful APIs with
+            <span className={styles.sectionHighlight}>REST</span>ful APIs with{' '}
             <span className={styles.sectionHighlight}>Node.js</span>, relational
             and non-relational databases. I enjoy figuring out best practices,
             designing architecture, reusable code. As an ex-daytrader, I find
@@ -75,6 +79,11 @@ const About: React.FC<Props> = () => {
             Although I don`t have aspirations in bartending or hospitality
             anymore, I do maintain a professional curiosity, and always try to
             apply the lessons I have learnt.
+          </p>
+          <p>I am currently building up my full-stack portfolio. If you are interested in my work, please {' '}
+            <Link href='/projects'>
+              <a className={styles.sectionLink}>Check out my projects here</a>
+            </Link>
           </p>
         </Subsection>
       </Section>
