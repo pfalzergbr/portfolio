@@ -1,0 +1,73 @@
+@import '../../../styles/abstracts/variables';
+
+.techModal {
+  position: absolute;
+  width: 40rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: $space-32;
+  background-color: $color-grey-dark;
+  border-radius: 1rem;
+  z-index: 20;
+
+  &Content {
+    display: grid;
+    grid-template-rows: repeat(2, min-content);
+  }
+
+  &Header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    color: $color-orange-medium;
+
+    & svg {
+      fill: $color-orange-medium;
+    }
+  }
+
+  &Title {
+    display: inline-block;
+    margin-left: $space-12;
+    font-size: $font-size-24;
+  }
+
+  &Description {
+    margin-top: $space-24;
+  }
+
+  &Projects {
+    margin-top: $space-24;
+
+    &Header {
+      color: $color-orange-medium;
+      font-size: $font-size-24;
+    }
+
+    &List {
+      list-style: none;
+      margin-top: $space-24;
+      padding-left: 0;
+    }
+  }
+
+  &Project {
+    margin-bottom: $space-24;
+    cursor: pointer;
+
+    &Title {
+      font-weight: 700;
+      margin-bottom: $space-sm-4;
+    }
+
+    &Description {
+      font-weight: 400;
+      margin: 0;
+    }
+    &:hover,
+    &:focus {
+      color: $color-orange-medium;
+    }
+  }
+}
