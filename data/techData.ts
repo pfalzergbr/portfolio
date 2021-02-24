@@ -1,6 +1,15 @@
+export interface ProjectSnippet {
+  title: string;
+  path: string;
+  snippet: string;
+
+}
+
 export interface Tech {
   icon: string;
   label: string;
+  description?: string;
+  projects?: ProjectSnippet[];
 }
 
 export const languagesBlock: Tech[] = [

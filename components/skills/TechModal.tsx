@@ -1,12 +1,18 @@
 import Link from 'next/link';
 import styles from './styles/TechModal.module.scss';
 import TechIcon from './TechIcon';
-
+import { Tech } from '../../data/techData';
 //Add connection
 
-export interface TechModalProps {}
 
-const TechModal: React.FC<TechModalProps> = () => {
+
+export interface TechModalProps {
+  techData: Tech;
+}
+
+const TechModal: React.FC<TechModalProps> = ({techData}) => {
+  // const {icon, label, description, projects} = techData;
+
   return (
     <div className={styles.techModal}>
       <div className={styles.techModalContent}>
