@@ -8,8 +8,6 @@ import Subsection from '../../components/about/Subsection';
 
 export interface Props {}
 
-// TODO - Add links to
-
 const About: React.FC<Props> = () => {
   return (
     <AnimatedRoute className={indexStyles.about}>
