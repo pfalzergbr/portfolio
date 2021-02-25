@@ -8,9 +8,10 @@ import { modalTransition } from '../../transitions/modalTransition';
 
 export interface TechModalProps {
   techData: Tech;
+  toggleOpenModal: () => void;
 }
 
-const TechModal: React.FC<TechModalProps> = ({ techData }) => {
+const TechModal: React.FC<TechModalProps> = ({ techData, toggleOpenModal }) => {
   const { icon, label, description, projects } = techData;
 
   return (
@@ -25,6 +26,7 @@ const TechModal: React.FC<TechModalProps> = ({ techData }) => {
         <div className={styles.techModalHeader}>
           <TechIcon icon={icon} />
           <h2 className={styles.techModalTitle}>{label}</h2>
+          <button onClick={toggleOpenModal} className={styles.techModalCloseButton}>Close</button>
         </div>
         <p className={styles.techModalDescription}>{description}</p>
       </div>

@@ -7,6 +7,7 @@ import {
   languagesBlock,
   frontendBlock,
   backendBlock,
+  databaseBlock,
   otherBlock,
 } from '../../data/techData';
 import styles from './index.module.scss';
@@ -17,6 +18,7 @@ export interface SkillsProps {
     languagesBlock: Tech[];
     frontendBlock: Tech[];
     backendBlock: Tech[];
+    databaseBlock: Tech[];
     otherBlock: Tech[];
   };
 }
@@ -40,6 +42,7 @@ export const getStaticProps: GetStaticProps = async () => {
         languagesBlock,
         frontendBlock,
         backendBlock,
+        databaseBlock,
         otherBlock,
       },
     },
