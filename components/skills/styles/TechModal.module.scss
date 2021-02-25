@@ -11,6 +11,8 @@
   padding: $space-32;
   background-color: $color-grey-dark;
   z-index: 20;
+  display: grid;
+  grid-template-rows: 1fr max-content 2fr;
   
   @include tablet-portrait-up {
     max-width: 56rem;
@@ -22,6 +24,14 @@
     border-radius: 1rem;
   }
 
+
+  &Container {
+    grid-row: 2/3;
+    @include tablet-portrait-up {
+      grid-row: 1/4;
+    
+    }
+  }
 
   &Content {
     display: grid;
