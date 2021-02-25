@@ -11,12 +11,13 @@ export interface TechStackProps {
     languagesBlock: Tech[];
     frontendBlock: Tech[];
     backendBlock: Tech[];
+    databaseBlock: Tech[];
     otherBlock: Tech[];
   };
 }
 
 const TechStack: React.FC<TechStackProps> = ({ techStack }) => {
-  const { languagesBlock, frontendBlock, backendBlock, otherBlock } = techStack;
+  const { languagesBlock, frontendBlock, backendBlock, databaseBlock, otherBlock } = techStack;
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalContent, setModalContent] = useState(null);
 
@@ -43,6 +44,7 @@ const TechStack: React.FC<TechStackProps> = ({ techStack }) => {
           <TechStackBlock toggleOpenModal={toggleOpenModal} changeModalContent={changeModalContent} techList={languagesBlock} />
           <TechStackBlock toggleOpenModal={toggleOpenModal} changeModalContent={changeModalContent} techList={frontendBlock} />
           <TechStackBlock toggleOpenModal={toggleOpenModal} changeModalContent={changeModalContent} techList={backendBlock} />
+          <TechStackBlock toggleOpenModal={toggleOpenModal} changeModalContent={changeModalContent} techList={databaseBlock} />
           <TechStackBlock toggleOpenModal={toggleOpenModal} changeModalContent={changeModalContent} techList={otherBlock} />
         </div>
       </div>

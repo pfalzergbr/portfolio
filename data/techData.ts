@@ -136,6 +136,15 @@ export const backendBlock: Tech[] = [
   },
 
   {
+    icon: 'firebase',
+    label: 'Firebase',
+    description:
+      'Very convenient way to get started with full stack. Since I especially enjoy backend development, I tend to build my own, I find firebase a great way to fire up a working project quickly, or attach a backend for an experiment. ',
+  },
+];
+
+export const databaseBlock: Tech[] = [
+  {
     icon: 'mysql',
     label: 'MySql',
     description:
@@ -153,16 +162,7 @@ export const backendBlock: Tech[] = [
     description:
       'Like for many junior developers, my first experience with databases, using mongoDB Atlas. I tend to gravitate towards SQL solutions, especially if my data is highly connected. Aside MQL, also familiar with Mongoose ODM.',
   },
-
-  {
-    icon: 'firebase',
-    label: 'Firebase',
-    description:
-      'Very convenient way to get started with full stack. Since I especially enjoy backend development, I tend to build my own, I find firebase a great way to fire up a working project quickly, or attach a backend for an experiment. ',
-  },
 ];
-
-export const databaseBlock: Tech[] = [];
 
 export const otherBlock: Tech[] = [
   {

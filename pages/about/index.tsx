@@ -53,7 +53,7 @@ const About: React.FC<Props> = () => {
             <span className={styles.sectionHighlight}>Node.js</span>, relational
             and non-relational databases. I enjoy figuring out best practices,
             designing architecture, reusable code. As an ex-daytrader, I find
-            flashing red testcases turning green extremely rewarding. I am
+            flashing red test cases turning green extremely rewarding. I am
             cofident using <span className={styles.sectionHighlight}>Git</span>{' '}
             for version control, currently integrating{' '}
             <span className={styles.sectionHighlight}>Docker</span> and{' '}
