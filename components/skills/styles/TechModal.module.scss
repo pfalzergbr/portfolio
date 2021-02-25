@@ -1,19 +1,31 @@
 @import '../../../styles/abstracts/variables';
+@import '../../../styles/abstracts/mixins';
 
 .techModal {
   position: absolute;
-  width: 40rem;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  // transform: translate(-50%, -50%);
   padding: $space-32;
   background-color: $color-grey-dark;
-  border-radius: 1rem;
   z-index: 20;
+  
+  @include tablet-portrait-up {
+    width: 40rem;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 1rem;
+  }
+
 
   &Content {
     display: grid;
     grid-template-rows: repeat(2, min-content);
+    
   }
 
   &Header {

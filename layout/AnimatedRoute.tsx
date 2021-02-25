@@ -6,9 +6,18 @@ export interface AnimatedRouteProps {
   className?: string;
 }
 
-const AnimatedRoute: React.FC<AnimatedRouteProps> = ({ children, className = "" }) => {
+const AnimatedRoute: React.FC<AnimatedRouteProps> = ({
+  children,
+  className = '',
+}) => {
   return (
-    <motion.div className={className} initial='initial' animate='enter' exit='exit' variants={routeTransition}>
+    <motion.div
+      className={className}
+      initial='initial'
+      animate='enter'
+      exit='exit'
+      variants={routeTransition}
+    >
       {children}
     </motion.div>
   );

@@ -7,9 +7,10 @@ import TechElement from './TechElement';
 export interface TechStackBlockProps {
   techList: Tech[];
   toggleOpenModal: () => void;
+  changeModalContent: (content:Tech) => void;
 }
 
-const TechStackBlock: React.FC<TechStackBlockProps> = ({ techList, toggleOpenModal }) => {
+const TechStackBlock: React.FC<TechStackBlockProps> = ({ techList, toggleOpenModal, changeModalContent }) => {
   return (
     <AnimatePresence>
       <div>
@@ -19,8 +20,8 @@ const TechStackBlock: React.FC<TechStackBlockProps> = ({ techList, toggleOpenMod
           animate='show'
           className={styles.techStackBlock}
         >
-          {techList.map(({ icon, label }, index) => (
-            <TechElement toggleOpenModal={toggleOpenModal} icon={icon} label={label} key={icon + index}/>
+          {techList.map((tech, index) => (
+            <TechElement toggleOpenModal={toggleOpenModal} tech={tech} changeModalContent={changeModalContent} key={tech.icon + index}/>
           ))}
         </motion.div>
       </div>
