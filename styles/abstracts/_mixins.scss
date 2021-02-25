@@ -44,6 +44,12 @@
   grid-column: 1/ -1;
 }
 
+
+@mixin project-item-width {
+  width: 100%;
+  max-width: 50rem;
+  min-width: 40rem;
+}
 // Components
 
 @mixin button-regular {
