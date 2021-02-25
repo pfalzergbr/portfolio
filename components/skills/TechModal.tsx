@@ -13,7 +13,6 @@ export interface TechModalProps {
 const TechModal: React.FC<TechModalProps> = ({ techData }) => {
   const { icon, label, description, projects } = techData;
 
-
   return (
     <motion.div
       initial='initial'
@@ -32,7 +31,7 @@ const TechModal: React.FC<TechModalProps> = ({ techData }) => {
       {projects && (
         <div className={styles.techModalProjects}>
           <h3 className={styles.techModalProjectsHeader}>
-            Check it out in projects:
+            Check it out in these projects:
           </h3>
           <ul className={styles.techModalProjectsList}>
             {projects.map((project) => {
