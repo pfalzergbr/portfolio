@@ -1,7 +1,9 @@
 import Link from 'next/link';
+import { motion } from 'framer-motion'
 import styles from './styles/TechModal.module.scss';
 import TechIcon from './TechIcon';
 import { Tech } from '../../data/techData';
+import {modalTransition } from '../../transitions/modalTransition';
 //Add connection
 
 
@@ -14,7 +16,13 @@ const TechModal: React.FC<TechModalProps> = ({techData}) => {
   // const {icon, label, description, projects} = techData;
 
   return (
-    <div className={styles.techModal}>
+    <motion.div 
+    initial='initial'
+      animate='enter'
+      exit='exit'
+      variants={modalTransition}
+    
+    className={styles.techModal}>
       <div className={styles.techModalContent}>
         <div className={styles.techModalHeader}>
           <TechIcon icon='typescript' />
@@ -64,7 +72,7 @@ const TechModal: React.FC<TechModalProps> = ({techData}) => {
           </Link>
         </ul>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

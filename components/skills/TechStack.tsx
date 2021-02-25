@@ -1,9 +1,10 @@
 import { useState } from 'react';
+import { AnimatePresence } from 'framer-motion';
 import TechStackBlock from './TechStackBlock';
 import styles from './styles/TechStack.module.scss';
 import SkillHeader from './SkillHeader';
 import { Tech } from '../../data/techData';
-import SkillModal from './TechModal';
+import TechModal from './TechModal';
 
 export interface TechStackProps {
   techStack: {
@@ -17,25 +18,32 @@ export interface TechStackProps {
 const TechStack: React.FC<TechStackProps> = ({ techStack }) => {
   const { languagesBlock, frontendBlock, backendBlock, otherBlock } = techStack;
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [modalContent, setModalContent] = useState({});
+  const [modalContent, setModalContent] = useState(null);
+
+  const changeModalContent = (content: Tech) => {
+    setModalContent(content)
+  }
 
   const toggleOpenModal = () => {
     setIsModalOpen(!isModalOpen);
   };
 
+
   return (
     <>
-      {isModalOpen && (
+      {isModalOpen && modalContent && (
         <div className={styles.overlay} onClick={toggleOpenModal} key='menu'></div>
       )}
-      {isModalOpen && <SkillModal />}
+      <AnimatePresence>
+      {isModalOpen && modalContent && <TechModal techData={modalContent}/>}
+      </AnimatePresence>
       <div className={styles.techStackContainer}>
         <SkillHeader title='Skills & Stack' subtitle='' />
         <div className={styles.techStackGrid}>
-          <TechStackBlock toggleOpenModal={toggleOpenModal} techList={languagesBlock} />
-          <TechStackBlock toggleOpenModal={toggleOpenModal} techList={frontendBlock} />
-          <TechStackBlock toggleOpenModal={toggleOpenModal} techList={backendBlock} />
-          <TechStackBlock toggleOpenModal={toggleOpenModal} techList={otherBlock} />
+          <TechStackBlock toggleOpenModal={toggleOpenModal} changeModalContent={changeModalContent} techList={languagesBlock} />
+          <TechStackBlock toggleOpenModal={toggleOpenModal} changeModalContent={changeModalContent} techList={frontendBlock} />
+          <TechStackBlock toggleOpenModal={toggleOpenModal} changeModalContent={changeModalContent} techList={backendBlock} />
+          <TechStackBlock toggleOpenModal={toggleOpenModal} changeModalContent={changeModalContent} techList={otherBlock} />
         </div>
       </div>
     </>
