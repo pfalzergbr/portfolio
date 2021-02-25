@@ -65,6 +65,15 @@
     }
   }
 
+  &CloseButton {
+    font-size: $font-size-16;
+    margin-left: auto;
+
+    &:hover {
+      color: $color-orange-medium
+    }
+  }
+
   &Project {
     margin-bottom: $space-24;
     cursor: pointer;

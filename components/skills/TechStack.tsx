@@ -36,7 +36,7 @@ const TechStack: React.FC<TechStackProps> = ({ techStack }) => {
         <div className={styles.overlay} onClick={toggleOpenModal} key='menu'></div>
       )}
       <AnimatePresence>
-      {isModalOpen && modalContent && <TechModal techData={modalContent}/>}
+      {isModalOpen && modalContent && <TechModal toggleOpenModal={toggleOpenModal} techData={modalContent}/>}
       </AnimatePresence>
       <div className={styles.techStackContainer}>
         <SkillHeader title='Skills & Stack' subtitle='' />
