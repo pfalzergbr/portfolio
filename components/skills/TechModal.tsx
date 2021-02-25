@@ -22,37 +22,44 @@ const TechModal: React.FC<TechModalProps> = ({ techData, toggleOpenModal }) => {
       variants={modalTransition}
       className={styles.techModal}
     >
-      <div className={styles.techModalContent}>
-        <div className={styles.techModalHeader}>
-          <TechIcon icon={icon} />
-          <h2 className={styles.techModalTitle}>{label}</h2>
-          <button onClick={toggleOpenModal} className={styles.techModalCloseButton}>Close</button>
+      <div className={styles.techModalContainer}>
+        <div className={styles.techModalContent}>
+          <div className={styles.techModalHeader}>
+            <TechIcon icon={icon} />
+            <h2 className={styles.techModalTitle}>{label}</h2>
+            <button
+              onClick={toggleOpenModal}
+              className={styles.techModalCloseButton}
+            >
+              Close
+            </button>
+          </div>
+          <p className={styles.techModalDescription}>{description}</p>
         </div>
-        <p className={styles.techModalDescription}>{description}</p>
+        {projects && (
+          <div className={styles.techModalProjects}>
+            <h3 className={styles.techModalProjectsHeader}>
+              Check it out in these projects:
+            </h3>
+            <ul className={styles.techModalProjectsList}>
+              {projects.map((project) => {
+                return (
+                  <Link key={project.title} href={project.path}>
+                    <li className={styles.techModalProject}>
+                      <h4 className={styles.techModalProjectTitle}>
+                        {project.title}
+                      </h4>
+                      <p className={styles.techModalProjectDescription}>
+                        {project.snippet}
+                      </p>
+                    </li>
+                  </Link>
+                );
+              })}
+            </ul>
+          </div>
+        )}
       </div>
-      {projects && (
-        <div className={styles.techModalProjects}>
-          <h3 className={styles.techModalProjectsHeader}>
-            Check it out in these projects:
-          </h3>
-          <ul className={styles.techModalProjectsList}>
-            {projects.map((project) => {
-              return (
-                <Link key={project.title} href={project.path}>
-                  <li className={styles.techModalProject}>
-                    <h4 className={styles.techModalProjectTitle}>
-                      {project.title}
-                    </h4>
-                    <p className={styles.techModalProjectDescription}>
-                      {project.snippet}
-                    </p>
-                  </li>
-                </Link>
-              );
-            })}
-          </ul>
-        </div>
-      )}
     </motion.div>
   );
 };

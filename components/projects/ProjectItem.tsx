@@ -39,7 +39,8 @@ const ProjectItem: React.FC<ProjectProps> = ({ project }) => {
       <p className={styles.projectSummary}>{summary}</p>
       <div className={styles.projectButtonContainer}>
         <Button buttonStyle={styles.projectButtonPrimary} text='Details' />
-        <a className={`${styles.projectButtonSecondary}`}>Check out live</a>
+        <a className={`${styles.projectButtonSecondary}`} href='#'>Live</a>
+        <a className={`${styles.projectButtonSecondary}`} href='#'>Github</a>
       </div>
     </article>
   );
