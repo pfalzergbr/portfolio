@@ -15,7 +15,7 @@ const About: React.FC<Props> = () => {
         <Image
           className={styles.image}
           // layout='responsive'
-          src='/images/profile.png'
+          src='/images/profile-1.png'
           alt='Photo of Gabor'
           width={945}
           height={945}
