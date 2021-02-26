@@ -1,0 +1,7 @@
+@import '../../styles/abstracts/mixins';
+
+.contact {
+  @include centered-container;
+  display: grid;
+  grid-template-rows: 1fr min-content 2fr;
+}

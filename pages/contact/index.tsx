@@ -1,12 +1,12 @@
+import ContactMessage from '../../components/contact/ContactMessage';
 import AnimatedRoute from '../../layout/AnimatedRoute';
-import UnderConstruction from '../../layout/layoutElements/UnderConstruction';
-
+import styles from './index.module.scss';
 export interface Props {}
 
 const Contact: React.FC<Props> = () => {
   return (
-    <AnimatedRoute className="">
-      <UnderConstruction />
+    <AnimatedRoute className={styles.contact}>
+      <ContactMessage />
     </AnimatedRoute>
   );
 };

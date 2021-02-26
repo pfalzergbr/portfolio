@@ -1,0 +1,72 @@
+@import '../../../styles/abstracts/variables';
+@import '../../../styles/abstracts/mixins';
+
+.container {
+  display: grid;
+  // grid-template-columns: 2fr 1fr;
+  grid-template-rows: repeat(2, min-content);
+  grid-row: 2/3;
+  grid-row-gap: $space-56;
+  grid-column-gap: $space-56;
+
+  @include tablet-portrait-up {
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+.title {
+  font-size: $font-size-54;
+  font-weight: 400;
+  color: $color-orange-medium;
+}
+
+.header {
+  grid-row: 1/2;
+  grid-column: 1/2;
+}
+
+.message {
+  grid-row: 2/3;
+  grid-column: 1/2;
+}
+
+.contactMessage {
+  max-width: 62rem;
+  font-size: $font-size-24;
+  line-height: $space-32;
+  margin-top: 0;
+  margin-bottom: $space-24;
+  font-weight: 300;
+}
+
+.emailLink {
+  color: $color-orange-medium;
+  font-size: $font-size-24;
+  line-height: $space-32;
+}
+
+.contactLinks {
+  display: grid;
+  grid-row: repeat(4, min-content);
+  grid-row-gap: $space-24;
+  grid-row: 3/4;
+  
+  @include tablet-portrait-up {
+    grid-row-gap: 0;
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
+
+  // grid-row-gap: $space-24;
+}
+
+.contactContainer {
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  align-items: center;
+  height: 4.2rem;
+}
+
+.contactText {
+  margin: 0;
+}
