@@ -50,23 +50,50 @@
   grid-row: repeat(4, min-content);
   grid-row-gap: $space-24;
   grid-row: 3/4;
+  justify-items: start;
+
   
   @include tablet-portrait-up {
     grid-row-gap: 0;
     grid-column: 2/3;
     grid-row: 2/3;
+    justify-items: end;
   }
 
   // grid-row-gap: $space-24;
 }
 
+.contactLink {
+
+
+  &:hover, &:focus {
+    color: $color-orange-medium;
+
+    & svg {
+      fill: $color-orange-medium;
+    }
+  }
+}
+
 .contactContainer {
   display: grid;
   grid-template-columns: repeat(2, max-content);
+  grid-column-gap: $space-24;
   align-items: center;
   height: 4.2rem;
 }
 
 .contactText {
   margin: 0;
+}
+
+.socialIcon {
+  height: 4.2rem;
+  width: 4.2rem;
+  fill: $color-off-white;
+  // transition: 0.2s ease-in-out;
+
+  // &:hover, &:focus {
+  //   fill: $color-orange-medium;
+  // }
 }
