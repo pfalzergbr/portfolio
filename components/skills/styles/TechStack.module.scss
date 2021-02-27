@@ -12,7 +12,7 @@
   &Grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, 16rem);
-    grid-row-gap: $space-32;
+    grid-row-gap: $space-56;
     grid-column-gap: $space-32;
   }
 

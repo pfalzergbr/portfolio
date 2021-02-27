@@ -29,7 +29,7 @@ const Skills: React.FC<SkillsProps> = ({ techStack }) => {
       <>
         <TechStack techStack={techStack} />
         <LanguageBlock />
-        {/* <OtherSkillsBlock /> */}
+        <OtherSkillsBlock />
       </>
     </AnimatedRoute>
   );
