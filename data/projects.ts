@@ -3,7 +3,7 @@ export const projects = [
     id: '1',
     slug: 'tradelog',
     priority: '1',
-    imageUrl: 'none',
+    imageUrl: '/images/projects/tradelog-details.png',
     name: 'Tradelog',
     status: 'Finished',
     techBreadcrumbs: [
@@ -16,13 +16,13 @@ export const projects = [
       'Postrgres',
     ],
     summary:
-      'Application for stock market traders for tracking profits, losses and strategy success rates. My very first full stack application, inspired by my trader days. Built with React hooks and Redux on the frontend, connected to a Node.js REST API made from scracth. Using JWT for authentication, PostgreSQL as a database.',
+      'Application for stock market traders for tracking profits, losses and strategy success rates. My very first larger full stack application, inspired by the time when I was learning how to trade. A simple application that keeps track of account, trade and strategy statistics for authenticated users. ',
   },
   {
     id: '2',
     slug: 'rewards',
     priority: '2',
-    imageUrl: 'none',
+    imageUrl: '/images/projects/tradelog-details.png',
     name: 'Rewards',
     status: 'Finished',
     techBreadcrumbs: [
@@ -32,7 +32,7 @@ export const projects = [
       'Sass',
     ],
     summary:
-      'Todo App on a stick (carrort inclusive), that keeps you balanced for long term performance. Set up your own rewards for a fair price to keep you motivated. The App Rewards you for completed tasks with coins, that you can spend on something fun. ',
+      'Todo App on a stick (carrort inclusive), that keeps you balanced for long term performance. Set up your own rewards for a fair price to keep you motivated. The application rewards you for completed tasks with coins, that you can spend on something fun. ',
   },
   // {
   //   id: '2',

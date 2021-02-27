@@ -2,12 +2,22 @@
 @import '../../../styles/abstracts/mixins';
 
 .otherSkillsBlock {
-  margin-top: $space-96;
-  grid-row: 4/5;
+  // margin-top: $space-96;
+  grid-row: 3/4;
   grid-column: 1/2;
-  
+
   @include tablet-landscape-up {
-    grid-row:3/4;
-    grid-column: 3/4;
+    grid-row: 2/3;
+    grid-column: 2/3;
   }
+}
+
+.skillsList {
+  list-style: none;
+  padding-left: 0;
+  margin-top: $space-32;
+}
+
+.skill {
+  margin-bottom: $space-sm-4;
 }

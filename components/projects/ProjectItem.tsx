@@ -1,3 +1,4 @@
+import Image  from 'next/image';
 import Button from '../UI/Button';
 import styles from './styles/Projects.module.scss';
 
@@ -19,13 +20,21 @@ export interface ProjectProps {
 }
 
 const ProjectItem: React.FC<ProjectProps> = ({ project }) => {
-  const { name, status, techBreadcrumbs, summary } = project;
+  const { name, status, imageUrl, techBreadcrumbs, summary } = project;
 
   const handleCheckDetails = () => {};
 
   return (
     <article className={styles.project}>
-      <div className={styles.projectImageContainer}></div>
+      <div className={styles.projectImageContainer}>
+        {imageUrl && <Image 
+        className={styles.image}
+        src={imageUrl}
+        alt='Project Screenshot'
+        width={500}
+        height={280}
+        objectFit='cover'/>}
+      </div>
 
       <div className={styles.projectHeader}>
         <h3 className={styles.projectName}>{name}</h3>
