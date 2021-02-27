@@ -11,6 +11,7 @@
   
   @include centered-container;
   
+
   @include tablet-portrait-up {
     grid-template-columns: max-content 1fr max-content;
     grid-template-rows: repeat(2, max-content);
