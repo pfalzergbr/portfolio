@@ -4,6 +4,8 @@ export const projects = [
     slug: 'tradelog',
     priority: '1',
     imageUrl: '/images/projects/tradelog-details.png',
+    liveUrl: 'https://tradelog-app.herokuapp.com/',
+    githubUrl: 'https://github.com/pfalzergbr/tradelog-front',
     name: 'Tradelog',
     status: 'Finished',
     techBreadcrumbs: [
@@ -22,7 +24,9 @@ export const projects = [
     id: '2',
     slug: 'rewards',
     priority: '2',
-    imageUrl: '/images/projects/tradelog-details.png',
+    liveUrl: 'https://gold-that-glitters.netlify.app/',
+    imageUrl: '/images/projects/rewards.png',
+    githubUrl: 'https://github.com/pfalzergbr/rewards',
     name: 'Rewards',
     status: 'Finished',
     techBreadcrumbs: [

@@ -2,7 +2,6 @@
 @import '../../../styles/abstracts/mixins';
 
 .otherSkillsBlock {
-  // margin-top: $space-96;
   grid-row: 3/4;
   grid-column: 1/2;
 
@@ -19,5 +18,6 @@
 }
 
 .skill {
+  font-weight: 300;
   margin-bottom: $space-sm-4;
 }
