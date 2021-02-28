@@ -112,7 +112,7 @@
 
   &ButtonContainer {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-column-gap: $space-16;
     @include project-item-width;
     align-self: end;
@@ -149,4 +149,5 @@
 
 .image {
   width: 100%;
+  border-radius: 1rem;
 }

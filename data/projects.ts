@@ -2,8 +2,11 @@ export const projects = [
   {
     id: '1',
     slug: 'tradelog',
+    category: 'main',
     priority: '1',
     imageUrl: '/images/projects/tradelog-details.png',
+    liveUrl: 'https://tradelog-app.herokuapp.com/',
+    githubUrl: 'https://github.com/pfalzergbr/tradelog-front',
     name: 'Tradelog',
     status: 'Finished',
     techBreadcrumbs: [
@@ -16,13 +19,16 @@ export const projects = [
       'Postrgres',
     ],
     summary:
-      'Application for stock market traders for tracking profits, losses and strategy success rates. My very first larger full stack application, inspired by the time when I was learning how to trade. A simple application that keeps track of account, trade and strategy statistics for authenticated users. ',
+      'Application for stock market traders that helps tracking profits, losses and strategy success rates. My very first larger full stack application, inspired by the time when I was learning how to trade. A simple application that keeps track of account, trade and strategy statistics for authenticated users. ',
   },
   {
     id: '2',
     slug: 'rewards',
+    category: 'main',
     priority: '2',
-    imageUrl: '/images/projects/tradelog-details.png',
+    liveUrl: 'https://gold-that-glitters.netlify.app/',
+    imageUrl: '/images/projects/rewards.png',
+    githubUrl: 'https://github.com/pfalzergbr/rewards',
     name: 'Rewards',
     status: 'Finished',
     techBreadcrumbs: [
@@ -32,7 +38,7 @@ export const projects = [
       'Sass',
     ],
     summary:
-      'Todo App on a stick (carrort inclusive), that keeps you balanced for long term performance. Set up your own rewards for a fair price to keep you motivated. The application rewards you for completed tasks with coins, that you can spend on something fun. ',
+      'Glorified todo app on a stick, that keeps you balanced for long term performance. Set up your own rewards for a fair price to keep you motivated. The application rewards you for completed tasks with coins, that you can spend on something fun. Also tries to motivate you with semi-fun toasted comments.',
   },
   // {
   //   id: '2',

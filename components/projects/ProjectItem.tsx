@@ -1,5 +1,6 @@
-import Image  from 'next/image';
-import Button from '../UI/Button';
+import Image from 'next/image';
+// import { useRouter } from 'next/router';
+// import Button from '../UI/Button';
 import styles from './styles/Projects.module.scss';
 
 type ProjectStatus = 'finished' | 'ongoing' | 'onhold';
@@ -8,7 +9,10 @@ export interface Project {
   id: string;
   slug: string;
   priority: number;
+  category: string;
   imageUrl: string;
+  liveUrl: string;
+  githubUrl: string;
   name: string;
   status: ProjectStatus;
   techBreadcrumbs: string[];
@@ -20,20 +24,34 @@ export interface ProjectProps {
 }
 
 const ProjectItem: React.FC<ProjectProps> = ({ project }) => {
-  const { name, status, imageUrl, techBreadcrumbs, summary } = project;
+  const {
+    name,
+    githubUrl,
+    liveUrl,
+    status,
+    imageUrl,
+    techBreadcrumbs,
+    summary,
+  } = project;
+  // const router = useRouter();
 
-  const handleCheckDetails = () => {};
+  // const handleCheckDetails = () => {
+  //   router.push(`/projects/${slug}`);
+  // };
 
   return (
     <article className={styles.project}>
       <div className={styles.projectImageContainer}>
-        {imageUrl && <Image 
-        className={styles.image}
-        src={imageUrl}
-        alt='Project Screenshot'
-        width={500}
-        height={280}
-        objectFit='cover'/>}
+        {imageUrl && (
+          <Image
+            className={styles.image}
+            src={imageUrl}
+            alt='Project Screenshot'
+            width={500}
+            height={280}
+            objectFit='cover'
+          />
+        )}
       </div>
 
       <div className={styles.projectHeader}>
@@ -42,14 +60,24 @@ const ProjectItem: React.FC<ProjectProps> = ({ project }) => {
       </div>
       <ul className={styles.projectTech}>
         {techBreadcrumbs.map((breadcrumb, index) => (
-          <li className={styles.projectTechBreadcrumb} key={breadcrumb + index}>{breadcrumb}</li>
+          <li className={styles.projectTechBreadcrumb} key={breadcrumb + index}>
+            {breadcrumb}
+          </li>
         ))}
       </ul>
       <p className={styles.projectSummary}>{summary}</p>
       <div className={styles.projectButtonContainer}>
-        <Button buttonStyle={styles.projectButtonPrimary} text='Details' />
-        <a className={`${styles.projectButtonSecondary}`} href='#'>Live</a>
-        <a className={`${styles.projectButtonSecondary}`} href='#'>Github</a>
+        {/* <Button
+          buttonStyle={styles.projectButtonPrimary}
+          text='Details'
+          onClick={handleCheckDetails}
+        /> */}
+        <a className={`${styles.projectButtonPrimary}`} href={liveUrl}>
+          Live
+        </a>
+        <a className={`${styles.projectButtonSecondary}`} href={githubUrl}>
+          Github
+        </a>
       </div>
     </article>
   );
