@@ -9,6 +9,7 @@ export interface Project {
   id: string;
   slug: string;
   priority: number;
+  category: string;
   imageUrl: string;
   liveUrl: string;
   githubUrl: string;
@@ -23,7 +24,15 @@ export interface ProjectProps {
 }
 
 const ProjectItem: React.FC<ProjectProps> = ({ project }) => {
-  const { name, githubUrl, liveUrl, status, imageUrl, techBreadcrumbs, summary } = project;
+  const {
+    name,
+    githubUrl,
+    liveUrl,
+    status,
+    imageUrl,
+    techBreadcrumbs,
+    summary,
+  } = project;
   // const router = useRouter();
 
   // const handleCheckDetails = () => {
