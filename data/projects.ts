@@ -1,9 +1,11 @@
-export const projects = [
+import { Project } from '../components/projects/ProjectItem';
+
+export const projects: Project[] = [
   {
     id: '1',
     slug: 'tradelog',
     category: 'main',
-    priority: '1',
+    priority: 1,
     imageUrl: '/images/projects/tradelog-details.png',
     liveUrl: 'https://tradelog-app.herokuapp.com/',
     githubUrl: 'https://github.com/pfalzergbr/tradelog-front',
@@ -25,7 +27,7 @@ export const projects = [
     id: '2',
     slug: 'rewards',
     category: 'main',
-    priority: '2',
+    priority: 2,
     liveUrl: 'https://gold-that-glitters.netlify.app/',
     imageUrl: '/images/projects/rewards.png',
     githubUrl: 'https://github.com/pfalzergbr/rewards',
@@ -59,3 +61,26 @@ export const projects = [
   //     'My portfolio site, that you are looking at right now. Built with TypeScript and Next.JS. Fetching GraphQL data from a Strapi headless CMS, and generates the page as a static site.',
   // },
 ];
+
+export const practiceProjects:Project[] = [
+  {
+    id: '3',
+    slug: 'vtm-diceroll',
+    category: 'practice',
+    priority: 3,
+    liveUrl: 'https://vtm-diceroll.netlify.app',
+    imageUrl: '/images/projects/vtm.png',
+    githubUrl: 'https://github.com/pfalzergbr/vtm-dice-ts-react',
+    name: 'VTM - Diceroll Generator',
+    status: 'Finished',
+    techBreadcrumbs: [
+      'TypeScript',
+      'React',
+      'React-hooks',
+      'CSS',
+      'Jest',
+    ],
+    summary:
+      'Diceroll generator for the popular gothic RPG, Vampire the Masquerade. Simple app with a complex enough system to practice TypeScript-React, and Jest testing for the internal logic. Also experimental app for React-Testing-Library',
+  },
+]

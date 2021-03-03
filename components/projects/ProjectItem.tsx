@@ -3,7 +3,7 @@ import Image from 'next/image';
 // import Button from '../UI/Button';
 import styles from './styles/Projects.module.scss';
 
-type ProjectStatus = 'finished' | 'ongoing' | 'onhold';
+type ProjectStatus = 'Finished' | 'Ongoing' | 'On hold';
 
 export interface Project {
   id: string;
