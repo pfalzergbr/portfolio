@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import ProjectGrid from '../../components/projects/ProjectGrid';
 import AnimatedRoute from '../../layout/AnimatedRoute';
 // import UnderConstruction from '../../layout/layoutElements/UnderConstruction';
@@ -12,6 +13,13 @@ export interface Props {
 const Portfolio: React.FC<Props> = ({ projects }) => {
   return (
     <AnimatedRoute className={styles.projects}>
+      <Head>
+        <title>Gabor Pfalzer - Projects</title>
+        <meta
+          name='description'
+          content='Full Stack Web Developer portfolio site of Gabor Pfalzer'
+        ></meta>
+      </Head>
       {/* <UnderConstruction /> */}
       <ProjectGrid
         projects={projects}
