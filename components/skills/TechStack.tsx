@@ -39,7 +39,7 @@ const TechStack: React.FC<TechStackProps> = ({ techStack }) => {
       {isModalOpen && modalContent && <TechModal toggleOpenModal={toggleOpenModal} techData={modalContent}/>}
       </AnimatePresence>
       <div className={styles.techStackContainer}>
-        <SkillHeader title='Skills & Stack' subtitle='' />
+        <SkillHeader title='Skills & Stack' subtitle='Click on technologies to see my particular experience' />
         <div className={styles.techStackGrid}>
           <TechStackBlock toggleOpenModal={toggleOpenModal} changeModalContent={changeModalContent} techList={languagesBlock} />
           <TechStackBlock toggleOpenModal={toggleOpenModal} changeModalContent={changeModalContent} techList={frontendBlock} />

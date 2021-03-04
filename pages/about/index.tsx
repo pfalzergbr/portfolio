@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import Head from 'next/head';
 import AnimatedRoute from '../../layout/AnimatedRoute';
 import indexStyles from './index.module.scss';
 import styles from '../../components/about/styles/Section.module.scss';
@@ -11,6 +12,13 @@ export interface Props {}
 const About: React.FC<Props> = () => {
   return (
     <AnimatedRoute className={indexStyles.about}>
+      <Head>
+        <title>Gabor Pfalzer - About</title>
+        <meta
+          name='description'
+          content='Full Stack Web Developer portfolio site of Gabor Pfalzer'
+        ></meta>
+      </Head>
       <div className={indexStyles.imageContainer}>
         <Image
           className={styles.image}
@@ -80,7 +88,9 @@ const About: React.FC<Props> = () => {
             anymore, I do maintain a professional curiosity, and always try to
             apply the lessons I have learnt.
           </p>
-          <p>I am currently building up my full-stack portfolio. If you are interested in my work, please {' '}
+          <p>
+            I am currently building up my full-stack portfolio. If you are
+            interested in my work, please{' '}
             <Link href='/projects'>
               <a className={styles.sectionLink}>Check out my projects here</a>
             </Link>
