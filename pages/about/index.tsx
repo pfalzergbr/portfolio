@@ -12,15 +12,15 @@ const About: React.FC<Props> = () => {
   return (
     <AnimatedRoute className={indexStyles.about}>
       <div className={indexStyles.imageContainer}>
-        {/* <Image
+        <Image
           className={styles.image}
           // layout='responsive'
-          src='/images/profile-1.png'
+          src='/images/profile-min.png'
           alt='Photo of Gabor'
           width={945}
           height={945}
           objectFit='contain'
-        /> */}
+        />
       </div>
       <Section title='About me'>
         <Subsection>
