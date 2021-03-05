@@ -23,7 +23,7 @@ const About: React.FC<Props> = () => {
         <Image
           className={styles.image}
           // layout='responsive'
-          src='https://github.com/pfalzergbr/pfalzergbr/blob/main/images/profile-min.png?raw=true'
+          src='https://cdn.sanity.io/images/mltlvaji/production/e36cb2c017e7a2ce488bd270388ab90badeca7bc-945x946.png'
           alt='Photo of Gabor'
           width={945}
           height={945}
