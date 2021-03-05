@@ -33,7 +33,7 @@ const About: React.FC<Props> = () => {
       <Section title='About me'>
         <Subsection>
           <p className={styles.sectionParagraph}>
-            My name is Peter, or Gabor, whichewer you prefer. I am a{' '}
+            My name is Peter, or Gabor, whichever you prefer. I am a{' '}
             <span className={styles.sectionHighlight}>
               full stack web developer
             </span>
