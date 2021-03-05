@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import MyImage from '../../components/UI/MyImage';
 import Link from 'next/link';
 import Head from 'next/head';
 import AnimatedRoute from '../../layout/AnimatedRoute';
@@ -20,10 +20,10 @@ const About: React.FC<Props> = () => {
         ></meta>
       </Head>
       <div className={indexStyles.imageContainer}>
-        <Image
+        <MyImage
           className={styles.image}
           // layout='responsive'
-          src='https://cdn.sanity.io/images/mltlvaji/production/e36cb2c017e7a2ce488bd270388ab90badeca7bc-945x946.png'
+          src='/v1614969014/profile-min_frtsp6.png'
           alt='Photo of Gabor'
           width={945}
           height={945}
