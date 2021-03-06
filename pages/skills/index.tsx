@@ -1,6 +1,6 @@
-
 import Head from 'next/head';
 import { GetStaticProps } from 'next';
+import { fetchGraphql } from '../../utils/fetchGrapql';
 import LanguageBlock from '../../components/skills/LanguageBlock';
 import TechStack from '../../components/skills/TechStack';
 import AnimatedRoute from '../../layout/AnimatedRoute';
@@ -45,10 +45,31 @@ const Skills: React.FC<SkillsProps> = ({ techStack }) => {
 };
 
 export const getStaticProps: GetStaticProps = async () => {
+  const url = 'https://mltlvaji.api.sanity.io/v1/graphql/production/default'
+  const query = `{
+    allTechData(sort: {priority: ASC}){
+      icon
+      label
+      column
+      priority
+      description:descriptionRaw
+      projects {
+       title
+        size
+        path
+        snippet:snippetRaw
+      }
+    }
+  }` 
+
+
+  const data = await fetchGraphql(url, query);
+  // console.log(data.allTechData.find(tech => tech.icon === 'javascript'));
+
   return {
     props: {
       techStack: {
-        languagesBlock,
+        languagesBlock: data.allTechData,
         frontendBlock,
         backendBlock,
         databaseBlock,

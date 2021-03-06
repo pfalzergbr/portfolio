@@ -1,3 +1,4 @@
+import { GetStaticProps } from 'next';
 import MyImage from '../../components/UI/MyImage';
 import Link from 'next/link';
 import Head from 'next/head';
@@ -7,9 +8,11 @@ import styles from '../../components/about/styles/Section.module.scss';
 import Section from '../../components/about/Section';
 import Subsection from '../../components/about/Subsection';
 
-export interface Props {}
+export interface Props {
+  imageUrl: string;
+}
 
-const About: React.FC<Props> = () => {
+const About: React.FC<Props> = ({imageUrl}) => {
   return (
     <AnimatedRoute className={indexStyles.about}>
       <Head>
@@ -23,7 +26,7 @@ const About: React.FC<Props> = () => {
         <MyImage
           className={styles.image}
           // layout='responsive'
-          src='/v1614969014/profile-min_frtsp6.png'
+          src={imageUrl}
           alt='Photo of Gabor'
           width={945}
           height={945}
@@ -102,3 +105,12 @@ const About: React.FC<Props> = () => {
 };
 
 export default About;
+
+
+export const getStaticProps: GetStaticProps = async (context) => {
+  return {
+    props: {
+      imageUrl: '/v1614969014/profile-min_frtsp6.png',
+    },
+  };
+};
