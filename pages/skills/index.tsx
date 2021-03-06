@@ -10,7 +10,7 @@ import {
   frontendBlock,
   backendBlock,
   databaseBlock,
-  otherBlock,
+  // otherBlock,
 } from '../../data/techData';
 import styles from './index.module.scss';
 import OtherSkillsBlock from '../../components/skills/OtherSkillsBlock';
@@ -64,16 +64,17 @@ export const getStaticProps: GetStaticProps = async () => {
 
 
   const data = await fetchGraphql(url, query);
-  // console.log(data.allTechData.find(tech => tech.icon === 'javascript'));
+  // console.log(data.allTechData);
+  // console.log(data.allTechData.find(tech => tech.icon === 'html').description[0].children);
 
   return {
     props: {
       techStack: {
         languagesBlock: data.allTechData,
-        frontendBlock,
-        backendBlock,
-        databaseBlock,
-        otherBlock,
+        frontendBlock : [],
+        backendBlock: [],
+        databaseBlock: [],
+        otherBlock: [],
       },
     },
   };

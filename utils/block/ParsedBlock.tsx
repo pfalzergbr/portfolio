@@ -1,18 +1,32 @@
+import PortableText from 'react-portable-text';
 import BlockContent from '@sanity/block-content-to-react';
-import Highlight from './Highlight';
+import highlight from './highlight';
 
+const BlockRenderer = (props) => {
+  console.log(props.children);
+  return <p>{props.children}</p>;
+};
 
 const serializers = {
-  marks: { Highlight }
-}
+  marks: { highlight },
+  types: { block: BlockRenderer },
+};
 
 export interface ParsedBlockProps {
-  nodeClassName: string;
-  data: []
+  className: string;
+  data: [];
 }
- 
+
 const ParsedBlock: React.FC<ParsedBlockProps> = (props) => {
-  return ( <BlockContent className={props.nodeClassName} block={props.data} serializers={serializers}/> );
-}
- 
+
+  return (
+    <BlockContent
+      className={props.className}
+      blocks={props.data}
+      renderContainerOnSingleChild={true}
+      serializers={serializers}
+    />
+  );
+};
+
 export default ParsedBlock;
