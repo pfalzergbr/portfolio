@@ -35,7 +35,7 @@ const TechModal: React.FC<TechModalProps> = ({ techData, toggleOpenModal }) => {
               Close
             </button>
           </div>
-          <ParsedBlock className={styles.techModalDescription} data={description} />
+          <ParsedBlock className={styles.techModalDescription} content={description} spanClass={styles.highlight} />
         </div>
         {projects && (
           <div className={styles.techModalProjects}>
@@ -50,7 +50,7 @@ const TechModal: React.FC<TechModalProps> = ({ techData, toggleOpenModal }) => {
                       <h4 className={styles.techModalProjectTitle}>
                         {project.title}
                       </h4>
-                      <ParsedBlock className={styles.techModalProjectDescription} data={project.snippet}/>
+                      <ParsedBlock className={styles.techModalProjectDescription} content={project.snippet}/>
                        {/* <p className={styles.techModalProjectDescription}>
                          {project.snippet}
                        </p> */}
