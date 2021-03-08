@@ -26,7 +26,8 @@ const Skills: React.FC<SkillsProps> = ({ techStack }) => {
           name='description'
           content='Full Stack Web Developer portfolio site of Gabor Pfalzer'
         ></meta>
-        <meta charSet='utf-8' className='next-head'></meta>
+        <meta property="og:title" content="My page title" key="title" />
+        <meta charSet='UTF-8' className='next-head'></meta>
       </Head>
       <>
         <TechStack techStack={techStack} />
@@ -40,7 +41,8 @@ const Skills: React.FC<SkillsProps> = ({ techStack }) => {
 export const getStaticProps: GetStaticProps = async () => {
   const techStack = await getSkillProps();
   // const data = await fetchGraphql(url, query);
-  // console.log(data.allTechData.find(tech => tech.icon === 'html').description[0].children);
+  console.log(techStack.find(tech => tech.icon === 'javascript').description[0]
+  );
 
   return {
     props: {
