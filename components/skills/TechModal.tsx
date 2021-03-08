@@ -2,7 +2,6 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import styles from './styles/TechModal.module.scss';
 import TechIcon from './TechIcon';
-import { Tech } from '../../data/techData';
 import { modalTransition } from '../../transitions/modalTransition';
 //Add connection
 

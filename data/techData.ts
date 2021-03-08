@@ -1,20 +1,4 @@
-import { projects } from './projects';
 
-export interface ProjectSnippet {
-  title: string;
-  size: string;
-  path: string;
-  snippet: [];
-}
-
-export interface Tech {
-  icon: string;
-  label: string;
-  // description?: string;
-  // description?: [];
-  description?: any;
-  projects?: ProjectSnippet[];
-}
 
 export const languagesBlock: Tech[] = [
   // {

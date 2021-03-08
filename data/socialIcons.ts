@@ -1,7 +1,3 @@
-export interface SocialIcon {
-  logo: string;
-  url: string;
-}
 
 export const defaultSocialIcons: SocialIcon[] = [
   { logo: 'github', url: 'https://github.com/pfalzergbr' },

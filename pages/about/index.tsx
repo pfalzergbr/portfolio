@@ -8,7 +8,7 @@ import styles from '../../components/about/styles/Section.module.scss';
 import Section from '../../components/about/Section';
 import Subsection from '../../components/about/Subsection';
 
-export interface Props {
+interface Props {
   imageUrl: string;
 }
 

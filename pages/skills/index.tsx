@@ -1,21 +1,15 @@
 import Head from 'next/head';
 import { GetStaticProps } from 'next';
-import { fetchGraphql } from '../../utils/fetchGrapql';
+import gql from "graphql-tag";
+// import { fetchGraphql } from '../../utils/fetchGrapql';
 import LanguageBlock from '../../components/skills/LanguageBlock';
 import TechStack from '../../components/skills/TechStack';
 import AnimatedRoute from '../../layout/AnimatedRoute';
-import {
-  Tech,
-  languagesBlock,
-  frontendBlock,
-  backendBlock,
-  databaseBlock,
-  // otherBlock,
-} from '../../data/techData';
 import styles from './index.module.scss';
 import OtherSkillsBlock from '../../components/skills/OtherSkillsBlock';
+import { client } from '../../client/client';
 
-export interface SkillsProps {
+interface SkillsProps {
   techStack: {
     languagesBlock: Tech[];
     frontendBlock: Tech[];
@@ -46,27 +40,41 @@ const Skills: React.FC<SkillsProps> = ({ techStack }) => {
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-  // const url = 'https://mltlvaji.api.sanity.io/v1/graphql/production/default';
-  // const query = `{
-  //   allTechData(sort: {priority: ASC}){
-  //     icon
-  //     label
-  //     column
-  //     priority
-  //     description:descriptionRaw
-  //     projects {
-  //      title
-  //       size
-  //       path
-  //       snippet:snippetRaw
-  //     }
-  //   }
-  // }`;
+  try {
+    const data = await client.query({
+      query: gql`query{
+        allTechs {
+          edges {
+            node {
+              label
+              icon
+              column
+              description
+              projects {
+                project {
+                  ... on Projectsnippet {
+                    title
+                    size
+                    path
+                    snippet
+                  }
+                }
+              }
+            }
+          }
+        }
+      }`
+    })
+    console.log(data.data.allTechs.edges);
+    
+  } catch (error) {
+    console.log(error);
+  }
 
-  // const data = await
+
 
   // const data = await fetchGraphql(url, query);
-  // // console.log(data.allTechData.find(tech => tech.icon === 'html').description[0].children);
+  // console.log(data.allTechData.find(tech => tech.icon === 'html').description[0].children);
 
 
   return {

@@ -2,7 +2,6 @@ import styles from './styles/TechStack.module.scss';
 import { motion } from 'framer-motion';
 import { fadeInItem } from '../../transitions/fadeInGroup';
 import TechIcon from './TechIcon';
-import { Tech } from '../../data/techData';
 
 export interface LanguageElementProps {
   tech: Tech;
