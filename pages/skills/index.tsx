@@ -1,13 +1,11 @@
 import Head from 'next/head';
 import { GetStaticProps } from 'next';
-import gql from "graphql-tag";
-// import { fetchGraphql } from '../../utils/fetchGrapql';
+import { getSkillProps } from './getSkillProps';
 import LanguageBlock from '../../components/skills/LanguageBlock';
 import TechStack from '../../components/skills/TechStack';
 import AnimatedRoute from '../../layout/AnimatedRoute';
 import styles from './index.module.scss';
 import OtherSkillsBlock from '../../components/skills/OtherSkillsBlock';
-import { client } from '../../client/client';
 
 interface SkillsProps {
   techStack: {
@@ -28,7 +26,7 @@ const Skills: React.FC<SkillsProps> = ({ techStack }) => {
           name='description'
           content='Full Stack Web Developer portfolio site of Gabor Pfalzer'
         ></meta>
-        <meta charSet="utf-8" className="next-head"></meta>
+        <meta charSet='utf-8' className='next-head'></meta>
       </Head>
       <>
         <TechStack techStack={techStack} />
@@ -40,47 +38,14 @@ const Skills: React.FC<SkillsProps> = ({ techStack }) => {
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-  try {
-    const data = await client.query({
-      query: gql`query{
-        allTechs {
-          edges {
-            node {
-              label
-              icon
-              column
-              description
-              projects {
-                project {
-                  ... on Projectsnippet {
-                    title
-                    size
-                    path
-                    snippet
-                  }
-                }
-              }
-            }
-          }
-        }
-      }`
-    })
-    console.log(data.data.allTechs.edges);
-    
-  } catch (error) {
-    console.log(error);
-  }
-
-
-
+  const techStack = await getSkillProps();
   // const data = await fetchGraphql(url, query);
   // console.log(data.allTechData.find(tech => tech.icon === 'html').description[0].children);
-
 
   return {
     props: {
       techStack: {
-        languagesBlock: [],
+        languagesBlock: techStack,
         frontendBlock: [],
         backendBlock: [],
         databaseBlock: [],
