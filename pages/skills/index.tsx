@@ -34,6 +34,7 @@ const Skills: React.FC<SkillsProps> = ({ techStack }) => {
           name='description'
           content='Full Stack Web Developer portfolio site of Gabor Pfalzer'
         ></meta>
+        <meta charSet="utf-8" className="next-head"></meta>
       </Head>
       <>
         <TechStack techStack={techStack} />
@@ -45,33 +46,34 @@ const Skills: React.FC<SkillsProps> = ({ techStack }) => {
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-  const url = 'https://mltlvaji.api.sanity.io/v1/graphql/production/default'
-  const query = `{
-    allTechData(sort: {priority: ASC}){
-      icon
-      label
-      column
-      priority
-      description:descriptionRaw
-      projects {
-       title
-        size
-        path
-        snippet:snippetRaw
-      }
-    }
-  }` 
+  // const url = 'https://mltlvaji.api.sanity.io/v1/graphql/production/default';
+  // const query = `{
+  //   allTechData(sort: {priority: ASC}){
+  //     icon
+  //     label
+  //     column
+  //     priority
+  //     description:descriptionRaw
+  //     projects {
+  //      title
+  //       size
+  //       path
+  //       snippet:snippetRaw
+  //     }
+  //   }
+  // }`;
 
+  // const data = await
 
-  const data = await fetchGraphql(url, query);
-  // console.log(data.allTechData);
-  // console.log(data.allTechData.find(tech => tech.icon === 'html').description[0].children);
+  // const data = await fetchGraphql(url, query);
+  // // console.log(data.allTechData.find(tech => tech.icon === 'html').description[0].children);
+
 
   return {
     props: {
       techStack: {
-        languagesBlock: data.allTechData,
-        frontendBlock : [],
+        languagesBlock: [],
+        frontendBlock: [],
         backendBlock: [],
         databaseBlock: [],
         otherBlock: [],

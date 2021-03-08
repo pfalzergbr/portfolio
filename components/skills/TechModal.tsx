@@ -4,7 +4,6 @@ import styles from './styles/TechModal.module.scss';
 import TechIcon from './TechIcon';
 import { Tech } from '../../data/techData';
 import { modalTransition } from '../../transitions/modalTransition';
-import ParsedBlock from '../../utils/block/ParsedBlock';
 //Add connection
 
 export interface TechModalProps {
@@ -35,7 +34,7 @@ const TechModal: React.FC<TechModalProps> = ({ techData, toggleOpenModal }) => {
               Close
             </button>
           </div>
-          <ParsedBlock className={styles.techModalDescription} content={description} spanClass={styles.highlight} />
+          {/* <ParsedBlock className={styles.techModalDescription} content={description} spanClass={styles.highlight} /> */}
         </div>
         {projects && (
           <div className={styles.techModalProjects}>
@@ -50,7 +49,7 @@ const TechModal: React.FC<TechModalProps> = ({ techData, toggleOpenModal }) => {
                       <h4 className={styles.techModalProjectTitle}>
                         {project.title}
                       </h4>
-                      <ParsedBlock className={styles.techModalProjectDescription} spanClass={styles.highlight} content={project.snippet}/>
+                      {/* <ParsedBlock className={styles.techModalProjectDescription} spanClass={styles.highlight} content={project.snippet}/> */}
                        {/* <p className={styles.techModalProjectDescription}>
                          {project.snippet}
                        </p> */}
