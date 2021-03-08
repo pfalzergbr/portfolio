@@ -36,7 +36,7 @@ const TechModal: React.FC<TechModalProps> = ({ techData, toggleOpenModal }) => {
           </div>
           <RichText render={description} />
         </div>
-        {projects && (
+        {projects[0].project && (
           <div className={styles.techModalProjects}>
             <h3 className={styles.techModalProjectsHeader}>
               Check it out in these projects:
