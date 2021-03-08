@@ -6,6 +6,7 @@ import TechStack from '../../components/skills/TechStack';
 import AnimatedRoute from '../../layout/AnimatedRoute';
 import styles from './index.module.scss';
 import OtherSkillsBlock from '../../components/skills/OtherSkillsBlock';
+import { buildTechBlocks } from '../../utils/normalizeTech';
 
 interface SkillsProps {
   techStack: {
@@ -39,18 +40,16 @@ const Skills: React.FC<SkillsProps> = ({ techStack }) => {
 
 export const getStaticProps: GetStaticProps = async () => {
   const techStack = await getSkillProps();
-  // const data = await fetchGraphql(url, query);
-  // console.log(techStack.find(tech => tech.icon === 'typescript').projects
-  // );
+  const blocks = buildTechBlocks(techStack);
 
   return {
     props: {
-      techStack: {
-        languagesBlock: techStack,
-        frontendBlock: [],
-        backendBlock: [],
-        databaseBlock: [],
-        otherBlock: [],
+      techStack : {
+        languagesBlock: blocks.languages,
+        frontendBlock: blocks.frontend,
+        backendBlock: blocks.backend,
+        databaseBlock: blocks.database,
+        otherBlock: blocks.other,
       },
     },
   };

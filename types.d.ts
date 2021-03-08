@@ -4,6 +4,14 @@ interface SocialIcon {
   url: string;
 }
 
+interface TechStack {
+  languages: Tech[];
+  frontend: Tech[];
+  backend: Tech[];
+  database: Tech[];
+  other: Tech[];
+}
+
 
 interface ProjectSnippet {
   project: {
