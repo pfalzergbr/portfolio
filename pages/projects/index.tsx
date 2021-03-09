@@ -2,7 +2,6 @@ import Head from 'next/head';
 import ProjectGrid from '../../components/projects/ProjectGrid';
 import AnimatedRoute from '../../layout/AnimatedRoute';
 import {getProjectProps} from './getProjectProps'
-import { practiceProjects } from '../../data/projects';
 import styles from './index.module.scss';
 import { buildProjectBlocks } from '../../utils/normalizeTech';
 
@@ -24,7 +23,6 @@ const Portfolio: React.FC<Props> = ({ projects }) => {
           content='Full Stack Web Developer portfolio site of Gabor Pfalzer'
         ></meta>
       </Head>
-      {/* <UnderConstruction /> */}
       <ProjectGrid
         projects={projects.main}
         header='Main Projects'
@@ -44,10 +42,6 @@ export const getStaticProps = async () => {
   const projectProps = await getProjectProps();
   const projects = buildProjectBlocks(projectProps);
 
-  // const projects = {
-  //   main: [],
-  //   practice: []
-  // }
   return {
     props: {
       projects: projects,

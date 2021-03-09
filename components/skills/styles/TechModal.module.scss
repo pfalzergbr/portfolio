@@ -56,13 +56,9 @@
   &Description {
       margin-top: $space-24;
     
-    // & > p {
-    //   width: 100%;
-    //   & > span {
-    //     color: $color-orange-medium;
-    //   }
-
-    // }
+      & strong {
+        color: $color-orange-medium;
+      }
   }
 
   &Projects {
@@ -101,14 +97,16 @@
     &Description {
       font-weight: 400;
       margin: 0;
+      
+      & strong {
+        color: $color-orange-medium;
+      }
     }
+
+
     &:hover,
     &:focus {
       color: $color-orange-medium;
     }
   }
-}
-
-.highlight {
-  color: $color-orange-medium;
 }

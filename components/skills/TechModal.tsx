@@ -34,7 +34,9 @@ const TechModal: React.FC<TechModalProps> = ({ techData, toggleOpenModal }) => {
               Close
             </button>
           </div>
-          <RichText render={description} />
+          <div className={styles.techModalDescription}>
+            <RichText render={description} />
+          </div>
         </div>
         {projects[0].project && (
           <div className={styles.techModalProjects}>
@@ -49,7 +51,9 @@ const TechModal: React.FC<TechModalProps> = ({ techData, toggleOpenModal }) => {
                       <h4 className={styles.techModalProjectTitle}>
                         {project.title}
                       </h4>
-                      <RichText render={project.snippet} />
+                      <div className={styles.techModalProjectDescription}>
+                        <RichText render={project.snippet} />
+                      </div>
                     </li>
                   </Link>
                 );
