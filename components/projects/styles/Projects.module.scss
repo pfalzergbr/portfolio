@@ -108,6 +108,9 @@
     // width: 100%;
     @include project-item-width;
     // margin: 0;
+    & strong {
+      color: $color-orange-medium;
+    }
   }
 
   &ButtonContainer {

@@ -1,3 +1,19 @@
+interface Project {
+  id: string;
+  slug: string;
+  priority: number;
+  category: string;
+  imageUrl: string;
+  liveUrl: string;
+  githubUrl: string;
+  name: string;
+  status: ProjectStatus;
+  breadcrumbs: {
+    breadcrumb: string
+  }[];
+  summary: [];
+}
+
 
 interface SocialIcon {
   logo: string;

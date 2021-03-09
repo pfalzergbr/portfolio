@@ -3,6 +3,11 @@ export const normalizeTech = ( techData ):Tech[] => {
   return normalizedTechData;
 }
 
+export const normalizeProject = ( projectData ) => {
+  const normalizedTechData = projectData.map(project => project.node)
+  return normalizedTechData;
+}
+
 
 export const buildTechBlocks = (techStack: Tech[]): TechStack => {
   const blocks = {

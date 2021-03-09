@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import styles from './styles/TechModal.module.scss';
 import TechIcon from './TechIcon';
 import { modalTransition } from '../../transitions/modalTransition';
-import {Link as PrismicLink, RichText, Date} from 'prismic-reactjs'
+import {RichText, Date} from 'prismic-reactjs'
 //Add connection
 
 export interface TechModalProps {
