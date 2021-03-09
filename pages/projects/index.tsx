@@ -1,13 +1,16 @@
 import Head from 'next/head';
 import ProjectGrid from '../../components/projects/ProjectGrid';
 import AnimatedRoute from '../../layout/AnimatedRoute';
-// import UnderConstruction from '../../layout/layoutElements/UnderConstruction';
-import { projects, practiceProjects } from '../../data/projects';
-import { Project } from '../../components/projects/ProjectItem';
+import {getProjectProps} from './getProjectProps'
 import styles from './index.module.scss';
+import { buildProjectBlocks } from '../../utils/normalizeTech';
 
 export interface Props {
-  projects: Project[];
+  projects: 
+  {
+    main: Project[];
+    practice: Project[];
+  } 
 }
 
 const Portfolio: React.FC<Props> = ({ projects }) => {
@@ -20,14 +23,13 @@ const Portfolio: React.FC<Props> = ({ projects }) => {
           content='Full Stack Web Developer portfolio site of Gabor Pfalzer'
         ></meta>
       </Head>
-      {/* <UnderConstruction /> */}
       <ProjectGrid
-        projects={projects}
+        projects={projects.main}
         header='Main Projects'
         description='Full Stack Applications and more complex, longer projects I tend to spend more time with.'
       />
       <ProjectGrid
-        projects={practiceProjects}
+        projects={projects.practice}
         header='Learning & Practice'
         description='I really enjoy learning new technologies. These are short, fun projects I build specifically for picking up, or practice new technologies.'
       />
@@ -36,9 +38,13 @@ const Portfolio: React.FC<Props> = ({ projects }) => {
 };
 
 export const getStaticProps = async () => {
+
+  const projectProps = await getProjectProps();
+  const projects = buildProjectBlocks(projectProps);
+
   return {
     props: {
-      projects,
+      projects: projects,
     },
   };
 };

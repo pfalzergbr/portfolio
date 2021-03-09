@@ -2,8 +2,8 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import styles from './styles/TechModal.module.scss';
 import TechIcon from './TechIcon';
-import { Tech } from '../../data/techData';
 import { modalTransition } from '../../transitions/modalTransition';
+import {RichText, Date} from 'prismic-reactjs'
 //Add connection
 
 export interface TechModalProps {
@@ -34,24 +34,26 @@ const TechModal: React.FC<TechModalProps> = ({ techData, toggleOpenModal }) => {
               Close
             </button>
           </div>
-          <p className={styles.techModalDescription}>{description}</p>
+          <div className={styles.techModalDescription}>
+            <RichText render={description} />
+          </div>
         </div>
-        {projects && (
+        {projects[0].project && (
           <div className={styles.techModalProjects}>
             <h3 className={styles.techModalProjectsHeader}>
               Check it out in these projects:
             </h3>
             <ul className={styles.techModalProjectsList}>
-              {projects.map((project) => {
+              {projects.map(({project}) => {
                 return (
                   <Link key={project.title} href={project.path}>
                     <li className={styles.techModalProject}>
                       <h4 className={styles.techModalProjectTitle}>
                         {project.title}
                       </h4>
-                      <p className={styles.techModalProjectDescription}>
-                        {project.snippet}
-                      </p>
+                      <div className={styles.techModalProjectDescription}>
+                        <RichText render={project.snippet} />
+                      </div>
                     </li>
                   </Link>
                 );

@@ -3,7 +3,6 @@ import { AnimatePresence } from 'framer-motion';
 import TechStackBlock from './TechStackBlock';
 import styles from './styles/TechStack.module.scss';
 import SkillHeader from './SkillHeader';
-import { Tech } from '../../data/techData';
 import TechModal from './TechModal';
 
 export interface TechStackProps {

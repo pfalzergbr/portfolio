@@ -1,5 +1,5 @@
 import styles from './styles/Projects.module.scss';
-import ProjectItem, { Project } from './ProjectItem';
+import ProjectItem from './ProjectItem';
 
 export interface ProjectGridProps {
   header: string;

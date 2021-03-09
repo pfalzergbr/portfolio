@@ -2,22 +2,9 @@ import Image from 'next/image';
 // import { useRouter } from 'next/router';
 // import Button from '../UI/Button';
 import styles from './styles/Projects.module.scss';
+import { RichText } from 'prismic-reactjs';
 
 type ProjectStatus = 'Finished' | 'Ongoing' | 'On hold';
-
-export interface Project {
-  id: string;
-  slug: string;
-  priority: number;
-  category: string;
-  imageUrl: string;
-  liveUrl: string;
-  githubUrl: string;
-  name: string;
-  status: ProjectStatus;
-  techBreadcrumbs: string[];
-  summary: string;
-}
 
 export interface ProjectProps {
   project: Project;
@@ -30,14 +17,9 @@ const ProjectItem: React.FC<ProjectProps> = ({ project }) => {
     liveUrl,
     status,
     imageUrl,
-    techBreadcrumbs,
+    breadcrumbs,
     summary,
   } = project;
-  // const router = useRouter();
-
-  // const handleCheckDetails = () => {
-  //   router.push(`/projects/${slug}`);
-  // };
 
   return (
     <article className={styles.project}>
@@ -59,13 +41,19 @@ const ProjectItem: React.FC<ProjectProps> = ({ project }) => {
         <span className={styles.projectStatus}>{status}</span>
       </div>
       <ul className={styles.projectTech}>
-        {techBreadcrumbs.map((breadcrumb, index) => (
-          <li className={styles.projectTechBreadcrumb} key={breadcrumb + index}>
-            {breadcrumb}
+        {breadcrumbs.map((breadcrumb, index) => (
+          <li
+            className={styles.projectTechBreadcrumb}
+            key={breadcrumb.breadcrumb + index}
+          >
+            {breadcrumb.breadcrumb}
           </li>
         ))}
       </ul>
-      <p className={styles.projectSummary}>{summary}</p>
+      <div className={styles.projectSummary}>
+        <RichText render={summary} />
+      </div>
+      {/* <p className={styles.projectSummary}>{summary}</p> */}
       <div className={styles.projectButtonContainer}>
         {/* <Button
           buttonStyle={styles.projectButtonPrimary}
