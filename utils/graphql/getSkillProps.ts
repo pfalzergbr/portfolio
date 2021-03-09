@@ -1,5 +1,5 @@
 import gql from "graphql-tag";
-import { normalizeTech } from '../../utils/normalizeTech';
+import { normalizeTech } from '../normalizeTech';
 import { client } from '../../client/client';
 
 export const getSkillProps = async () => {
