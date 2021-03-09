@@ -1,5 +1,5 @@
 import gql from "graphql-tag";
-import { normalizeProject} from '../../utils/normalizeTech';
+import { normalizeProject} from '../normalizeTech';
 import { client } from '../../client/client';
 
 

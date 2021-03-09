@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import ProjectGrid from '../../components/projects/ProjectGrid';
 import AnimatedRoute from '../../layout/AnimatedRoute';
-import {getProjectProps} from './getProjectProps'
+import {getProjectProps} from '../../utils/graphql/getProjectProps'
 import styles from './index.module.scss';
 import { buildProjectBlocks } from '../../utils/normalizeTech';
 

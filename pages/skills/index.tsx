@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import { GetStaticProps } from 'next';
-import { getSkillProps } from './getSkillProps';
+import { getSkillProps } from '../../utils/graphql/getSkillProps';
 import LanguageBlock from '../../components/skills/LanguageBlock';
 import TechStack from '../../components/skills/TechStack';
 import AnimatedRoute from '../../layout/AnimatedRoute';
