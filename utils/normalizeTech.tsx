@@ -22,3 +22,16 @@ export const buildTechBlocks = (techStack: Tech[]): TechStack => {
   }
   return blocks;
 }
+
+export const buildProjectBlocks = ( projects: Project[] ) => {
+  const projectBlocks = {
+    main: [],
+    practice: []
+  }
+
+  for (let i = 0; i < projects.length; i++) {
+    projectBlocks[projects[i].category].push(projects[i]);
+  }
+  return projectBlocks;
+
+}

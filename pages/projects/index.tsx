@@ -4,9 +4,14 @@ import AnimatedRoute from '../../layout/AnimatedRoute';
 import {getProjectProps} from './getProjectProps'
 import { practiceProjects } from '../../data/projects';
 import styles from './index.module.scss';
+import { buildProjectBlocks } from '../../utils/normalizeTech';
 
 export interface Props {
-  projects: Project[];
+  projects: 
+  {
+    main: Project[];
+    practice: Project[];
+  } 
 }
 
 const Portfolio: React.FC<Props> = ({ projects }) => {
@@ -21,12 +26,12 @@ const Portfolio: React.FC<Props> = ({ projects }) => {
       </Head>
       {/* <UnderConstruction /> */}
       <ProjectGrid
-        projects={projects}
+        projects={projects.main}
         header='Main Projects'
         description='Full Stack Applications and more complex, longer projects I tend to spend more time with.'
       />
       <ProjectGrid
-        projects={[]}
+        projects={projects.practice}
         header='Learning & Practice'
         description='I really enjoy learning new technologies. These are short, fun projects I build specifically for picking up, or practice new technologies.'
       />
@@ -37,10 +42,15 @@ const Portfolio: React.FC<Props> = ({ projects }) => {
 export const getStaticProps = async () => {
 
   const projectProps = await getProjectProps();
+  const projects = buildProjectBlocks(projectProps);
 
+  // const projects = {
+  //   main: [],
+  //   practice: []
+  // }
   return {
     props: {
-      projects: projectProps,
+      projects: projects,
     },
   };
 };
