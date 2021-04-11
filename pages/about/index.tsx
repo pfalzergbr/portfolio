@@ -15,12 +15,24 @@ interface Props {
 const About: React.FC<Props> = ({imageUrl}) => {
   return (
     <AnimatedRoute className={indexStyles.about}>
-      <Head>
-        <title>Gabor Pfalzer - About</title>
+     <Head>
+        <meta name='viewport' content='width=device-width, initial-scale=1' />
+        <meta charSet='utf-8' />
+        <title>Gabor Pfalzer - Portfolio</title>
         <meta
-          name='description'
-          content='Full Stack Web Developer portfolio site of Gabor Pfalzer'
-        ></meta>
+          property='og:title'
+          content='Gabor Pfalzer - Portfolio'
+        />
+        <meta property='type' content='Websote' />
+        <meta
+          property='og:image'
+          content='https://res.cloudinary.com/pfalzer-dev/image/upload/v1618154691/portfolio-min_v4oztd.png'
+        />
+        <meta
+          property='og:description'
+          content='Full Stack Web Development Portfolio, London'
+        />
+        <meta name='author' content='Gabor Pfalzer' />
       </Head>
       <div className={indexStyles.imageContainer}>
         <MyImage
