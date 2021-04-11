@@ -25,7 +25,6 @@ const About: React.FC<Props> = ({imageUrl}) => {
       <div className={indexStyles.imageContainer}>
         <MyImage
           className={styles.image}
-          // layout='responsive'
           src={imageUrl}
           alt='Photo of Gabor'
           width={945}

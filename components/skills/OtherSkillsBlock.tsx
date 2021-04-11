@@ -26,7 +26,7 @@ const OtherSkillsBlock: React.FC<OtherSkillsBlockProps> = () => {
             Fast and efficient learner, experienced teacher
           </motion.li>
           <motion.li variants={fadeInItem} className={styles.skill}>
-            Disciplined and extremely patient.
+            Disciplined and extremely patient
           </motion.li>
           <motion.li variants={fadeInItem} className={styles.skill}>
             Excellent communication and people skills (ex-bartender)
@@ -35,7 +35,7 @@ const OtherSkillsBlock: React.FC<OtherSkillsBlockProps> = () => {
             Organized and methodical, great teamworker
           </motion.li>
           <motion.li variants={fadeInItem} className={styles.skill}>
-            Highly analytical, but focused on reality.
+            Highly analytical, but focused on reality
           </motion.li>
           <motion.li variants={fadeInItem} className={styles.skill}>
             Management and Leadership experience, also good follower
