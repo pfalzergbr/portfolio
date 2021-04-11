@@ -11,8 +11,15 @@ export default function Home({ socialIcons }) {
     <AnimatedRoute className={styles.landing}>
       <>
         <Head>
-          <title>Gabor Pfalzer - Home</title>
-          <meta name="description" content="Full Stack Web Developer portfolio site of Gabor Pfalzer" ></meta>
+        <meta name='viewport' content='width=device-width, initial-scale=1' />
+        <meta charSet='utf-8' />
+        <title>Gabor Pfalzer - Portfolio</title>
+        <meta name='description' content='Full Stack Web Development Portfolio, London' />
+        <meta name='title' property='og:title' content='Gabor Pfalzer - Portfolio' />
+        <meta property='og:type' content='Websote' />
+        <meta name='image' property='og:image' content='https://res.cloudinary.com/pfalzer-dev/image/upload/v1618154691/portfolio-min_v4oztd.png' />
+        <meta name='description' property='og:description' content='Full Stack Web Development Portfolio, London' />
+        <meta name='author' content='Gabor Pfalzer' />
         </Head>
         <Hero />
         <SocialWidget socialIcons={socialIcons} />
