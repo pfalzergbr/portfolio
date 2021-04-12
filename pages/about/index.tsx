@@ -12,23 +12,26 @@ interface Props {
   imageUrl: string;
 }
 
-const About: React.FC<Props> = ({imageUrl}) => {
+const About: React.FC<Props> = ({ imageUrl }) => {
   return (
     <AnimatedRoute className={indexStyles.about}>
-     <Head>
+      <Head>
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <meta charSet='utf-8' />
         <title>Gabor Pfalzer - Portfolio</title>
         <meta
+          name='title'
           property='og:title'
           content='Gabor Pfalzer - Portfolio'
         />
-        <meta property='type' content='Websote' />
+        <meta name='type' property='type' content='Website' />
         <meta
+          name='image'
           property='og:image'
           content='https://res.cloudinary.com/pfalzer-dev/image/upload/v1618154691/portfolio-min_v4oztd.png'
         />
         <meta
+          name='description'
           property='og:description'
           content='Full Stack Web Development Portfolio, London'
         />
@@ -116,7 +119,6 @@ const About: React.FC<Props> = ({imageUrl}) => {
 };
 
 export default About;
-
 
 export const getStaticProps: GetStaticProps = async (context) => {
   return {
