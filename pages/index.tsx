@@ -13,14 +13,20 @@ export default function Home({ socialIcons }) {
         <Head>
           <meta name='viewport' content='width=device-width, initial-scale=1' />
           <meta charSet='utf-8' />
-          <title>Gabor Pfalzer - Portfolio</title>
-          <meta property='og:title' content='Gabor Pfalzer - Portfolio' />
-          <meta property='type' content='Websote' />
+          <title>Gabor Pfalzer - Portfolio Site</title>
           <meta
+            name='title'
+            property='og:title'
+            content='Gabor Pfalzer - Portfolio Site'
+          />
+          <meta name='type' property='og:type' content='Portfolio Website' />
+          <meta
+            name='image'
             property='og:image'
             content='https://res.cloudinary.com/pfalzer-dev/image/upload/v1618154691/portfolio-min_v4oztd.png'
           />
           <meta
+            name='description'
             property='og:description'
             content='Full Stack Web Development Portfolio, London'
           />
