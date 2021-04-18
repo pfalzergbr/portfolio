@@ -53,19 +53,13 @@ const ProjectItem: React.FC<ProjectProps> = ({ project }) => {
       <div className={styles.projectSummary}>
         <RichText render={summary} />
       </div>
-      {/* <p className={styles.projectSummary}>{summary}</p> */}
       <div className={styles.projectButtonContainer}>
-        {/* <Button
-          buttonStyle={styles.projectButtonPrimary}
-          text='Details'
-          onClick={handleCheckDetails}
-        /> */}
-        <a className={`${styles.projectButtonPrimary}`} href={liveUrl}>
+        {liveUrl && <a className={`${styles.projectButtonPrimary}`} href={liveUrl}>
           Live
-        </a>
-        <a className={`${styles.projectButtonSecondary}`} href={githubUrl}>
+        </a>}
+        {githubUrl && <a className={`${styles.projectButtonSecondary}`} href={githubUrl}>
           Github
-        </a>
+        </a>}
       </div>
     </article>
   );

@@ -19,7 +19,7 @@ function MyApp({ Component, pageProps, router }: AppProps) {
         <meta name='type' property='og:type' content='Website' />
         <meta
           name='image'
-          property="og:image"
+          property='og:image'
           content='https://res.cloudinary.com/pfalzer-dev/image/upload/v1618154691/portfolio-min_v4oztd.png'
         />
         <meta
