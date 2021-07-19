@@ -74,31 +74,33 @@ const About: React.FC<Props> = ({ imageUrl }) => {
             <span className={styles.sectionHighlight}>HTML</span> and{' '}
             <span className={styles.sectionHighlight}>CSS</span>, styling with{' '}
             <span className={styles.sectionHighlight}>Sass</span>. I build{' '}
-            <span className={styles.sectionHighlight}>REST</span>ful APIs with{' '}
-            <span className={styles.sectionHighlight}>Node.js</span>, relational
-            and non-relational databases. I enjoy figuring out best practices,
-            designing architecture, reusable code. As an ex-daytrader, I find
-            flashing red test cases turning green extremely rewarding. I am
-            cofident using <span className={styles.sectionHighlight}>Git</span>{' '}
-            for version control, currently integrating{' '}
+            <span className={styles.sectionHighlight}>REST</span>ful and{' '}
+            <span className={styles.sectionHighlight}>GraphQL</span>APIs,
+            relational and non-relational databases. I enjoy figuring out best
+            practices, designing architecture, reusable code. As an
+            ex-daytrader, I find flashing red test cases turning green extremely
+            rewarding. I am cofident using{' '}
+            <span className={styles.sectionHighlight}>Git</span> for version
+            control, currently integrating{' '}
             <span className={styles.sectionHighlight}>Docker</span> and{' '}
             <span className={styles.sectionHighlight}>CI/CD</span> to my
             everyday workflow,{' '}
           </p>
           <p className={styles.sectionParagraph}>
-            I am focusing on deepening my foundational skills at the moment. In
-            the future, I am planning to expand my toolkit with PHP - Laravel. I
-            also enjoy messing about with{' '}
-            <span className={styles.sectionHighlight}>Python</span>. I can pick
-            it up relatively quickly if needed.
+            I am focusing on my skills as an overall engineer at the moment,
+            learning about Data Structures, Algorithms and Object Oriented
+            Design Patterns. I am currently learning{' '}
+            <span className={styles.sectionHighlight}>Java</span> , to take my
+            OOP skills to the next level. I am also pretty confident with{' '}
+            <span className={styles.sectionHighlight}>Python</span>, I could
+            pick it up relatively quickly if needed.
           </p>
           <p className={styles.sectionParagraph}>
             In my free time, I like learning new things like tech or languages
-            (my Chinese needs work, Swedish also on the list), working on side
-            projects. I love spending time with my lovely wife, I enjoy an
-            occasional video game, or being outside chasing wildlife. I would
-            love to get back into martial arts (wing-chun for me), once I have a
-            more regular schedule.
+            (my Chinese needs work), working on side projects. I love spending
+            time with my lovely wife, I enjoy an occasional video game, or being
+            outside chasing wildlife. I would love to get back into martial arts
+            (wing-chun for me), once I have a more regular schedule.
           </p>
           <p className={styles.sectionParagraph}>
             Although I don`t have aspirations in bartending or hospitality
@@ -106,8 +108,9 @@ const About: React.FC<Props> = ({ imageUrl }) => {
             apply the lessons I have learnt.
           </p>
           <p>
-            I am currently building up my full-stack portfolio. If you are
-            interested in my work, please{' '}
+            I am currently building a full featured Role Playing application
+            with a UX designer friend, under the name{' '}
+            <span className={styles.sectionHighlight}>StudioGR</span>{' '}
             <Link href='/projects'>
               <a className={styles.sectionLink}>Check out my projects here</a>
             </Link>
