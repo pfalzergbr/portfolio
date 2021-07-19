@@ -20,11 +20,11 @@ const LanguageBlock: React.FC = () => {
         >
           <LanguageElement
             language='English'
-            levelDescription='Learning since the age of 7, living in the UK since 2012'
+            levelDescription='Fluent, living in the UK since 2012'
           />
           <LanguageElement
             language='Japanese'
-            levelDescription='Ex-Japanese teacher, practically fluent. Bit rusty'
+            levelDescription='Ex-Japanese teacher, practically fluent'
           />
           <LanguageElement language='Hungarian' levelDescription='Native' />
           <LanguageElement
@@ -33,7 +33,7 @@ const LanguageBlock: React.FC = () => {
           />
           <LanguageElement
             language='Spanish'
-            levelDescription='Four years in high school, inactive. Good understanding'
+            levelDescription='Four years in high school, inactive. Good understanding.'
           />
         </motion.div>
       </AnimatePresence>
