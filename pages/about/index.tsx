@@ -50,7 +50,7 @@ const About: React.FC<Props> = ({ imageUrl }) => {
       <Section title='About me'>
         <Subsection>
           <p className={styles.sectionParagraph}>
-            My name is Peter, or Gabor, whichever you prefer. I am a{' '}
+            My name is Gabor, whichever you prefer. I am a{' '}
             <span className={styles.sectionHighlight}>
               full stack web developer
             </span>
@@ -61,59 +61,35 @@ const About: React.FC<Props> = ({ imageUrl }) => {
             mangement. As you can see, I enjoy learning new things.
           </p>
           <p className={styles.sectionParagraph}>
-            Actively programming pretty much full time since early 2020, I am
-            currently looking for my first tech position as a{' '}
-            <span className={styles.sectionHighlight}>web developer.</span> My
-            current stack is mainly{' '}
-            <span className={styles.sectionHighlight}>JavaScript</span> based, I
-            am also spending a plenty of time with{' '}
-            <span className={styles.sectionHighlight}>TypeScript</span>{' '}
-            recently. I am familiar with frontend frameworks -{' '}
-            <span className={styles.sectionHighlight}>React</span> and{' '}
-            <span className={styles.sectionHighlight}>Vue</span>,{' '}
-            <span className={styles.sectionHighlight}>HTML</span> and{' '}
-            <span className={styles.sectionHighlight}>CSS</span>, styling with{' '}
-            <span className={styles.sectionHighlight}>Sass</span>. I build{' '}
-            <span className={styles.sectionHighlight}>REST</span>ful and{' '}
-            <span className={styles.sectionHighlight}>GraphQL</span>APIs,
-            relational and non-relational databases. I enjoy figuring out best
-            practices, designing architecture, reusable code. As an
-            ex-daytrader, I find flashing red test cases turning green extremely
-            rewarding. I am cofident using{' '}
-            <span className={styles.sectionHighlight}>Git</span> for version
-            control, currently integrating{' '}
-            <span className={styles.sectionHighlight}>Docker</span> and{' '}
-            <span className={styles.sectionHighlight}>CI/CD</span> to my
-            everyday workflow,{' '}
+            Actively programming pretty much full time since early 2020. I am a {' '}
+            <span className={styles.sectionHighlight}>Software Engineer</span>
+            {' '}at{' '}
+            <span className={styles.sectionHighlight}>Venn Apps</span> in London. {' '}
+            Being in charge of our frontend codebase, I spend most of my time building and maintaining our web applications, mainly written in {' '}
+            <span className={styles.sectionHighlight}>TypeScript</span>,{' '}
+            <span className={styles.sectionHighlight}>React</span>,{' '} and {' '}
+            <span className={styles.sectionHighlight}>Next.js</span>. I also do regular work on the backend, contributing to extending and maintaining our serverless <span className={styles.sectionHighlight}>Node/TypeScript</span>{' '}API. 
+            As a company, we are building bespoke, native e-commerce mobile applications with rich integrations, which I support from the frontend web. 
+          </p>
+
+          <p className={styles.sectionParagraph}>
+            I am very passionate about creating performant, highly interactive, complex Web Applications, writing highly reusable, well tested, robust code. I enjoy creating new features just as much as refactoring, leaving the codebase a little bit better than I found. Very comfortable with both{' '}
+            <span className={styles.sectionHighlight}>Functional</span>, and <span className={styles.sectionHighlight}>Object Oriented</span> code.
           </p>
           <p className={styles.sectionParagraph}>
-            I am focusing on my skills as an overall engineer at the moment,
-            learning about Data Structures, Algorithms and Object Oriented
-            Design Patterns. I am currently learning{' '}
-            <span className={styles.sectionHighlight}>Java</span> , to take my
-            OOP skills to the next level. I am also pretty confident with{' '}
-            <span className={styles.sectionHighlight}>Python</span>, I could
-            pick it up relatively quickly if needed.
+            Coding outside work, I enjoy learning about Design Patterns, Algorithms, Data Structure, and working in becoming a more effective, well rounded engineer, being competent at solving problems. I happily work on my own projects in my free time.{' '}
+          </p>
+          <p className={styles.sectionParagraph}>
+            Apart from my main stack, I spent time with {' '}
+            <span className={styles.sectionHighlight}>Python</span>, built a good understanding and basic proficiency with <span className={styles.sectionHighlight}>Java</span> and OOP, and very much looking forward to work on some more complex side projects with <span className={styles.sectionHighlight}>Go</span>.
+            Recently getting into <span className={styles.sectionHighlight}>Microservices</span>, and planning to work on my skills around <span className={styles.sectionHighlight}>Cloud Native</span>, most likely GCP.
           </p>
           <p className={styles.sectionParagraph}>
             In my free time, I like learning new things like tech or languages
             (my Chinese needs work), working on side projects. I love spending
             time with my lovely wife, I enjoy an occasional video game, or being
             outside chasing wildlife. I would love to get back into martial arts
-            (wing-chun for me), once I have a more regular schedule.
-          </p>
-          <p className={styles.sectionParagraph}>
-            Although I don`t have aspirations in bartending or hospitality
-            anymore, I do maintain a professional curiosity, and always try to
-            apply the lessons I have learnt.
-          </p>
-          <p>
-            I am currently building a full featured Role Playing application
-            with a UX designer friend, under the name{' '}
-            <span className={styles.sectionHighlight}>StudioGR</span>{' '}
-            <Link href='/projects'>
-              <a className={styles.sectionLink}>Check out my projects here</a>
-            </Link>
+            (wing-chun for me), once the state of the world allows.
           </p>
         </Subsection>
       </Section>
